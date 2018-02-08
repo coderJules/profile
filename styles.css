@@ -1,0 +1,153 @@
+
+
+/*Global_________________________*/
+
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+@import url('https://fonts.googleapis.com/css?family=Nunito:200,300,400,600');
+body {
+  background-color: whitesmoke;
+}
+
+h2 {
+  color: #a79535;
+  font-family: 'Comfortaa', cursive;
+  text-align: center;
+  font-weight: 400px;
+  letter-spacing: 2px;
+
+}
+
+h4 {
+  font-family: 'Nunito', sans-serif;
+  color: #989696;
+  font-weight: 200px;
+  letter-spacing: 1px;
+}
+
+p {
+  font-family: 'Nunito', sans-serif;
+  font-style: 200px;
+  color: #989696;
+}
+
+
+a {
+  text-decoration: none;
+  color: #4d4d4d;
+  font-family: "Nunito", sans-serif;
+  justify-content: center;
+}
+
+/* class and ids____________________*/
+
+.header-text {
+  text-align: center;
+  padding: 5px 25px;
+}
+
+.list-inline {
+  display: inline-block;
+  padding-left: 0;
+  vertical-align: middle;
+  margin: 20px;
+}
+
+ul a {
+  padding-left: 0;
+  font-size: 22px;
+  padding: 10px;
+  color: lightgray;
+}
+
+ul a:hover {
+  color: #a79535;
+  font-size: 22px;
+}
+
+ul {
+  vertical-align: middle;
+}
+
+
+
+.circle-image {
+  border-radius: 50%;
+  border: 3px solid #4d4d4d;
+}
+
+#header-box {
+  margin-top: 25px;
+  padding-bottom: 25px;
+}
+
+#profile-pic {
+  width: 150px;
+  margin: 0 auto;
+  display: block;
+  margin: 0 auto;
+
+}
+
+.card {
+  height: auto;
+  width: 500px;
+  background-color: #FDFDFD;
+  margin: 5px auto;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding-right: 25px;
+  padding-left: 25px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+}
+
+.center-inline-block {
+  text-align: center;
+  padding-left: 0;
+}
+
+.table-image {
+  width: 220px;
+  display: inline-block;
+  margin: 10px;
+  border-radius: 3px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  margin-top: 0;
+}
+
+.table-text {
+  margin-left: 20px;
+  margin-top: 0px;
+}
+
+td {
+  vertical-align: top;
+}
+
+/* ul a {
+  font-size: 17px;
+  margin:0 auto;
+ }*/
+
+button {
+  background-color: none;
+  color: #a79535;
+  border: 3px solid #a79535;
+  border-radius: 3px;
+  display: block;
+  margin: 0 auto;
+  padding: 0 20px;
+  margin: 10px, 0;
+  margin-bottom: 20px;
+}
+button:hover {
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+
+}
+
+
+
+
