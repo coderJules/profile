@@ -1,0 +1,185 @@
+html,body {
+margin:0;
+padding:0;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Roboto:500|Varela+Round');
+//VARIABLES
+
+$h1-color: white;
+$h2-color: white;
+$h3-color: white;
+$h4-color: slategray;
+$h5-color: slategray;
+
+$font-headers: 'Varela Round', sans-serif;
+$font-content: 'Roboto Condensed', sans-serif;
+$font-buttons: 'Roboto', sans-serif;
+
+
+
+
+
+
+
+//MIXINS
+
+@mixin flexbox () {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @content;
+}
+
+@mixin flex-direction($direction) {
+  -webkit-box-flex: $direction;
+  -moz-box-flex: $direction;
+  -webkit-flex: $direction;
+  -ms-flex: $direction;
+  flex: $direction;
+  @content;
+}
+
+@mixin justify-content($justify) {
+ -webkit-justify-content: $justify;
+     -moz-justify-content: $justify;
+      -ms-justify-content: $justify;
+          justify-content: $justify;
+            -ms-flex-pack: $justify;
+            @content;
+}
+
+@mixin flex-wrap($wrap) {
+  -webkit-flex-wrap: $wrap;
+     -moz-flex-wrap: $wrap;
+      -ms-flex-wrap: $wrap;
+          flex-wrap: $wrap;
+          @content;
+}
+
+@mixin align-content($align) {
+  -webkit-align-content: $align;
+     -moz-align-content: $align;
+      -ms-align-content: $align;
+          align-content: $align;
+          @content;
+}
+
+// Cross-axis Alignment
+// - applies to: flex items
+// auto | flex-start | flex-end | center | baseline | stretch
+@mixin align-self($align) {
+  -webkit-align-self: $align;
+     -moz-align-self: $align;
+      -ms-align-self: $align;
+          align-self: $align;
+          @content;
+}
+
+
+
+//STYLES
+/* Dropdown Button */
+.dropbtn {
+    color: white;
+    padding: 16px;
+    font-size: 24px;
+    border: none;
+    background: transparent;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.mobile-dropdown {
+    position: relative;
+    width: 100%;
+    background: transparent;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+header {
+  height: 50vh;
+  background: #23C06E;
+  background-size: cover;
+}
+.mobile-banner {
+  margin: 0;
+  padding: 0;
+  height: calc(50vh - 70px);
+  color: white;
+  @include flexbox() {
+  }
+  @include flex-direction(column) {
+  }
+  @include justify-content(center) {
+  }
+  @include align-content(middle) {
+  }
+  @include flex-wrap (wrap) {
+  }
+  img {
+    width: 200px;
+    @include align-self(flex-end) {
+    }
+  }
+}
+
+.banner-text {
+  margin: 0 auto;
+
+  h4 {
+    text-align: right;
+    font-size: 24px;
+    font-family: $font-content;
+    letter-spacing: 5px;
+    font-weight: 500;
+    margin: 10px;
+    margin-left: 12px;
+  }
+  h6 {
+    text-align: right;
+    font-size: 16px;
+    font-family: $font-content;
+    font-weight: 100;
+    margin: 10px;
+    margin-right: 22px;
+    margin-left: 12px;
+  }
+}
+
+.banner-large-logo {
+  width: 100%;
+  margin: 0 auto;
+  @include flexbox() {
+  }
+  @include justify-content(center) {
+  }
+}
+
