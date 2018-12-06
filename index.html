@@ -1,87 +1,105 @@
-<!DOCTYPE html>
+
+<!DOCTYPE svg PUBLIC “-//W3C//DTD SVG 1.1//EN”
+    “http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd”>
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>profile page</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Pulp Web Design</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="app.css">
     <script src="https://use.fontawesome.com/releases/v5.0.6/js/brands.js"></script>
     <script src="https://use.fontawesome.com/releases/v5.0.6/js/solid.js"></script>
     <script src="https://use.fontawesome.com/releases/v5.0.6/js/regular.js"></script>
     <script src="https://use.fontawesome.com/releases/v5.0.6/js/fontawesome.js"></script>
-
-
   </head>
-
-<div class="card" id="header-box">
-  <img src="images/linkedinprofileeditweb.jpg" id="profile-pic" class="circle-image">
-  <h2 class="header-text">Julie VanderLaan</h2>
-  <h4 class="header-text">Professional cookie eater @ Le Wagon</h4>
-  <p class="header-text">I began by designing simple static websites with Squarespace, and am learning to build dynamic websites with Ruby on Rails!</p>
-  <button><a href="https://www.pulpwebdesign.com/" alt="link to PulpWebDesign.com" target="_blank"><h4>see for yourself</h4></a></button>
-</div>
-<div class="card">
-  <ul class="center-inline-block">
-    <li class="list-inline"><a href="#">
-      <i class="fab fa-facebook-f" target="_blank"></i>
-    </a></li>
-    <li class="list-inline"> <a href="#">
-      <i class="fab fa-linkedin-in" target="_blank"></i>
-    </a></li>
-    <li class="list-inline"><a href="#">
-      <i class="fab fa-twitter" target="_blank"></i>
-    </a></li>
-  </ul>
-</div>
-
-<div class="card">
-
-  <h2 class="header-text">What I'm listening to</h2>
-    <table>
-      <tbody>
-        <tr>
-          <td>
-            <img src="images/john_mayer.jpg" alt="picture of John Mayer's album 'The Search For Everything'" class="table-image">
-          </td>
-          <td>
-            <p class="table-text"><strong>John Mayer: "The Search For Everything</strong></p>
-            <p class="table-text">This mellow album is my Saturday morning go-to. As my husband and I slowly sip our coffee while "Love on the weekend" echoes through the house, I'm reminded that sometimes the little things in life are actually the best things.
-            </p>
-          </td>
-        </tr>
-
-          <td>
-            <img src="images/mumford_and_sons.jpg" alt="picture of Mumford and Son's album 'Wilder Minds'" class="table-image">
-          </td>
-          <td>
-            <p class="table-text"><strong>Mumford and Sons: "Wilder Minds"</strong></p>
-            <p class="table-text">Though I don't always listen to songs with lyrics when I'm working, this album manages to fade into the background. The calm yet upbeat song structure manages to keep coding frustrations at bay, while keeping me energized at the same time.
-            </p>
-          </td>
-        </tr>
-      <tr>
-        <td><img src="images/goat_rodeo_session.jpg" alt="picture of the Goat Rodeo Session's album 'The Goat Rodeo Sessions'" class="table-image"></td>
-          <td>
-            <p class="table-text"><strong>Yo-Yo Ma, Stuart Duncan, Edgar Meyer, Chris Thile: "Goat Rodeo Sessions"</strong></p>
-            <p class="table-text">When I am looking to be inspired, I listen to these guys. Four prodigies came together to make this album. The result is a collection of songs with weaving melodies, complex instrumental layers and rich sound; all while staying casual due to a strong folk overtone.</p>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-<div class="card">
-<h2>About this page</h2>
-<p class="header-text">This page has been coded during the <br><a href="https://www.lewagon.com/">FullStack program @LeWagon.</a><br>It was probably the best time of my life! ; )</p>
-    <ul class="center-inline-block">
-      <li class="list-inline"><a href="#">
-        <i class="fas fa-heart" target="_blank"></i>
-      </a></li>
-      <li class="list-inline"> <a href="#">
-        <i class="fas fa-reply" target="_blank"></i>
-      </a></li>
-      <li class="list-inline"><a href="#">
-        <i class="fas fa-star" target="_blank"></i>
-      </a></li>
-    </ul>
-</div>
+    <body>
+    <header>
+      <nav>
+        <div class="mobile-dropdown-nav">
+          <button class="dropbtn"><i class="fas fa-bars"></i></button>
+            <div class="dropdown-content">
+              <a href="#">Our Work</a>
+              <a href="#">About</a>
+            </div>
+          </div>
+        </nav>
+      <div class="mobile-banner">
+        <div class="banner-large-logo">
+          <img src="/images/Pulp_splash.svg" alt="Pulp logo"/>
+        </div>
+        <div class="banner-text">
+          <h4>Fresh web design</h4>
+          <h6>More than just a pretty face</h6>
+        </div>
+    </div>
+    </header>
+    <div class="half-page-text">
+      <div>
+        <h4>Smart sites, wrapped in pretty packages.</h4>
+      </div>
+    </div>
+    <div class="full-page-text">
+      <div class="one-of-two-block">
+        <div>
+          <h3>Save Time</h3>
+          <p>Jason, a busy small business owner, came to us looking to automate his time consuming workflow and processes.</p>
+        </div>
+        <div class="self-flex-end">
+          <p>Johnson Real Estate Investment Group, Inc.</p>
+          <a href="jreig.html">
+          <button href="">solution</button></a>
+        </div>
+      </div>
+      <div class="one-of-two-block">
+        <div>
+          <h3>Build trust</h3>
+          <p>Stephanie, a new massage therapist, needed a website that conveyed professionalism, and ensured convenient scheduling options for new clients.</p>
+        </div>
+        <div class="self-flex-end">
+          <p>The Body Mechanic</p>
+          <a href="the_body_mechanic.html"><button>solution</button></a>
+      </div>
+    </div>
+        <div class="one-of-two-block">
+          <div>
+          <h3>Tell a story</h3>
+          <p>Ryan, a motivational speaker, needed a site that promoted his personal brand, and allowed for easy ways to connect to his social media platforms</p>
+        </div>
+        <div class="self-flex-end">
+          <p>Ryan Mayer Motivation</p><button href="">solution</button>
+        </div>
+      </div>
+        <div class="one-of-two-block">
+        <div>
+          <h3>Your Turn</h3>
+           <p>Drop us a line and tell us about your project.</p>
+        </div>
+        <div class="self-flex-end">
+          <button class="green-button" href="">contact</button>
+        </div>
+      </div>
+    </div>
+      <div class="about-text">
+        <div class="half-page-gradient">
+        <div class="about-info">
+          <!-- <div>
+            <img src="/images/about_photo.png" class="profile-picture" alt="profile-picture"/>
+          </div> -->
+          <div class="about-info-p">
+            <h3>hi :)</h3><br>
+            <p>I'm Jules, the designer / developer for Pulp. I'm a pretty laid back person who loves anything creative or challenging. Bonus if it's both!</p><br>
+            <p>Message me and tell me a little about yourself and your project.</p><br>
+            <p>And of course, feel free to read a little more about me if you're the curious sort.</p>
+          </div>
+        </div>
+      <div class="self-align-right-flex-end">
+        <button href="">let's chat</button>
+    </div>
+  </div>
+  </div>
+  <div class="half-page-gradient">
+  </div>
+    <script src="components.js"></script>
   </body>
 </html>
+
