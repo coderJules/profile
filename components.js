@@ -1,6 +1,13 @@
-//SVG fallback
+// TOGGLE DIV FOR PORTFOLIO SECTION
 
-// function svgasimg() {
-//   return document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1");
-// }
+//THE BODY MECHANIC -----------------
+
+function toggle_div() {
+    var x = document.getElementById("div-name-here");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
 
