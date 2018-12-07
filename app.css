@@ -197,6 +197,8 @@ header {
   -ms-justify-content: center;
   justify-content: center;
   -ms-flex-pack: center; }
+  .banner-large-logo .logo-image {
+    content: url("images/pulp-splash.png"); }
 
 .half-page-text {
   padding: 15px;
@@ -326,6 +328,10 @@ header {
   background-color: white;
   height: 100px; }
 
+.portfolio-wrapper hr {
+  margin-top: 15px;
+  width: 85%; }
+
 .portfolio-title {
   text-align: center;
   color: slategray;
@@ -348,6 +354,7 @@ header {
   height: 250px; }
 
 .foreground-picture {
+  content: url("images/banner-computer-dim-edit.png");
   position: absolute;
   top: 20px;
   left: 0;
@@ -357,6 +364,7 @@ header {
   width: 280px; }
 
 .background-picture {
+  content: url("images/computerscreen.png");
   position: absolute;
   z-index: -1;
   top: 10px;
@@ -366,11 +374,49 @@ header {
   margin-right: auto;
   width: 300px; }
 
-.portfolio-image {
+.search-page-img {
+  content: url("images/jreig-prop-comp-search.png");
   width: 100vw;
   margin: 0 auto;
   box-sizing: border-box;
   box-shadow: 1px 1px 3px rgba(1, 1, 1, 0.3); }
+
+.results-img {
+  content: url("images/comp-results.jpg");
+  width: 100vw;
+  margin: 0 auto;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 3px rgba(1, 1, 1, 0.3); }
+
+.map-img {
+  content: url("images/result-map.jpg");
+  width: 100vw;
+  margin: 0 auto;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 3px rgba(1, 1, 1, 0.3); }
+
+.list-img {
+  content: url("images/result-list.jpg");
+  width: 100vw;
+  margin: 0 auto;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 3px rgba(1, 1, 1, 0.3); }
+
+.table-img {
+  content: url("images/result-table.jpg");
+  width: 100vw;
+  margin: 0 auto;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 3px rgba(1, 1, 1, 0.3); }
+
+.new-est-img {
+  content: url("images/jreig-items.png");
+  width: 100vw;
+  margin: 0 auto;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 3px rgba(1, 1, 1, 0.3);
+  margin-left: -30px;
+  margin-top: 15px; }
 
 .portfolio-image:nth-of-type(1) {
   margin-bottom: 0; }
@@ -385,6 +431,9 @@ header {
   border: 0 3px 0 3px solid #23C06E; }
   .portfolio-text p {
     margin-top: 15px; }
+  .portfolio-text h4 {
+    margin-top: 15px;
+    margin-bottom: -15px; }
 
 .portfolio-image-text {
   color: white;
@@ -398,7 +447,7 @@ header {
 
 .about-text {
   font-family: "Roboto Condensed", sans-serif;
-  background-image: url("images/about_photo_full.jpg");
+  background-image: url("images/about-photo-full.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

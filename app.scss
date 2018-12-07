@@ -138,6 +138,14 @@ p {
  @content;
 }
 
+@mixin portfolio-image {
+  width: 100vw;
+  margin: 0 auto;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 3px rgba(1, 1, 1, .3);
+  @content
+}
+
 
 //FLEXBOX MIXINS
 
@@ -402,6 +410,9 @@ header {
   }
   @include justify-content(center) {
   }
+  .logo-image {
+    content:url("images/pulp-splash.png");
+  }
 }
 
 //HOME PAGE - 2ND HALF OF PAGE --------------
@@ -530,6 +541,13 @@ header {
 
   //------------------------
 
+.portfolio-wrapper {
+  hr {
+    margin-top: 15px;
+    width: 85%;
+  }
+}
+
 .portfolio-title {
   text-align: center;
   color: $font-dark-color;
@@ -556,6 +574,7 @@ header {
 }
 
 .foreground-picture {
+  content:url("images/banner-computer-dim-edit.png");
   position: absolute;
   top: 20px;
   left: 0;
@@ -566,6 +585,7 @@ header {
 }
 
 .background-picture {
+  content:url("images/computerscreen.png");
   position: absolute;
   z-index: -1;
   top: 10px;
@@ -577,11 +597,44 @@ header {
 
 }
 
-.portfolio-image {
-  width: 100vw;
-  margin: 0 auto;
-  box-sizing: border-box;
-  box-shadow: 1px 1px 3px rgba(1, 1, 1, .3);
+//portfolio images ------------------------------
+
+.search-page-img {
+  content:url("images/jreig-prop-comp-search.png");
+  @include portfolio-image() {
+  }
+}
+
+.results-img {
+  content:url("images/comp-results.jpg");
+  @include portfolio-image() {
+  }
+}
+
+.map-img {
+  content:url("images/result-map.jpg");
+  @include portfolio-image() {
+  }
+}
+
+.list-img {
+  content:url("images/result-list.jpg");
+  @include portfolio-image() {
+  }
+}
+
+.table-img {
+  content:url("images/result-table.jpg");
+  @include portfolio-image() {
+  }
+}
+
+.new-est-img {
+  content:url("images/jreig-items.png");
+  @include portfolio-image() {
+  }
+  margin-left: -30px;
+  margin-top: 15px;
 }
 
 .portfolio-image:nth-of-type(1) {
@@ -598,6 +651,10 @@ header {
   border: 0 3px 0 3px solid $green;
   p {
     margin-top: 15px;
+  }
+  h4 {
+  margin-top: 15px;
+  margin-bottom: -15px;
   }
 }
 
@@ -623,7 +680,7 @@ header {
 
 .about-text {
   font-family: $font-content;
-  background-image: url("images/about_photo_full.jpg");
+  background-image: url("images/about-photo-full.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
