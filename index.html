@@ -12,87 +12,93 @@
     <script src="https://use.fontawesome.com/releases/v5.0.6/js/regular.js"></script>
     <script src="https://use.fontawesome.com/releases/v5.0.6/js/fontawesome.js"></script>
   </head>
-    <body>
-    <header>
-      <nav>
-        <div class="mobile-dropdown-nav">
-          <button class="dropbtn"><i class="fas fa-bars"></i></button>
-            <div class="dropdown-content">
-              <a href="#">Our Work</a>
-              <a href="#">About</a>
+  <body>
+    <div class="mobile-dropdown-nav">
+          <a href="index.html"><div class="navbar-logo"></div></a>
+          <div class="dropdown">
+            <div class="dropbtn" onclick="myFunction()"></div>
+              <div id="myDropdownHome" class="dropdown-content">
+                <a href="#work">Our Work</a>
+                <a href="#jules">About</a>
+              </div>
             </div>
           </div>
         </nav>
-      <div class="mobile-banner">
-        <div class="banner-large-logo">
-          <div class="logo-image">
-          </div>
-          <!-- <img src="images/pulp-splash.svg
-      " alt="Pulp logo"> -->
-        </div>
-        <div class="banner-text">
-          <h4>Fresh web design</h4>
-          <h6>More than just a pretty face</h6>
-        </div>
-    </div>
-    </header>
-    <div class="half-page-text">
-      <div>
-        <h4>Smart sites, wrapped in pretty packages.</h4>
-      </div>
-    </div>
-    <div class="full-page-text">
-      <div class="one-of-two-block">
+    <header>
+      <div class="banner">
         <div>
-          <h3>Save Time</h3>
-          <p>Jason, a busy small business owner, came to us looking to automate his time consuming workflow and processes.</p>
-        </div>
-        <div class="self-flex-end">
-          <p>Johnson Real Estate Investment Group, Inc.</p>
-          <a href="jreig.html">
-          <button href="">solution</button></a>
-        </div>
-      </div>
-      <div class="one-of-two-block">
-        <div>
-          <h3>Build trust</h3>
-          <p>Stephanie, a new massage therapist, needed a website that conveyed professionalism, and ensured convenient scheduling options for new clients.</p>
-        </div>
-        <div class="self-flex-end">
-          <p>The Body Mechanic</p>
-          <a href="the_body_mechanic.html"><button>solution</button></a>
-      </div>
-    </div>
-        <div class="one-of-two-block">
+           <h3>Fresh websites</h3>
+         </div>
           <div>
-          <h3>Tell a story</h3>
-          <p>Ryan, a motivational speaker, needed a site that promoted his personal brand, and allowed for easy ways to connect to his social media platforms</p>
-        </div>
-        <div class="self-flex-end">
-          <p>Ryan Mayer Motivation</p><button href="">solution</button>
-        </div>
+            <h4>modern design + smart solutions</h4>
+          </div>
       </div>
-        <div class="one-of-two-block">
-        <div>
-          <h3>Your Turn</h3>
-           <p>Drop us a line and tell us about your project.</p>
-        </div>
-        <div class="self-flex-end">
-          <button class="green-button" href="">contact</button>
-        </div>
+      <div class="video-div">
+        <iframe src="https://player.vimeo.com/video/320916675?background=1&muted=1&quality=720p" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
       </div>
+    </header>
+    <div class="main-wrapper">
+
+<div id="work" class="full-page-text">
+  <div class="one-of-two-block">
+  <div>
+    <h3>Save time</h3>
+    <p>Jason, a busy small business owner, came to us looking to automate his time consuming workflow and processes.</p>
+  </div>
+  <div class="self-flex-end">
+    <p>Johnson Real Estate Investment Group, Inc.</p>
+      <a href="jreig.html">
+      <button href="">solution</button></a>
+  </div>
+  </div>
+  <div class="one-of-two-block">
+    <div>
+      <h3>Build trust</h3>
+        <p>Stephanie, a new massage therapist, needed a website that conveyed professionalism, and ensured convenient scheduling options for new clients.</p>
     </div>
-      <div class="about-text">
+    <div class="self-flex-end">
+      <p>The Body Mechanic</p>
+      <a href="the_body_mechanic.html"><button>solution</button></a>
+    </div>
+    </div>
+    <div class="one-of-two-block">
+    <div>
+      <h3>Tell a story</h3>
+        <p>Ryan, a motivational speaker, needed a site that promoted his personal brand, and allowed for easy ways to connect to his social media platforms</p>
+      </div>
+    <div class="self-flex-end">
+      <p>Ryan Mayer Motivation</p>
+      <a href="ryan-mayer-motivation.html"><button>solution</button></a>
+    </div>
+  </div>
+  <div class="full-width-div">
+    <div id="one-block-special">
+      <div>
+        <h3>Your Turn</h3>
+          <p>Call or email me with your project details. I would love to listen and help you if I can!</p>
+      </div>
+      <div class="self-flex-end">
+        <button class="green-button" href="">contact</button>
+        </div>
+    </div>
+  </div>
+</div>
+    <div class="about-text">
+     <!--  <div>
+         <h4>About Pulp</h4>
+       </div> -->
+       <img src="images/about-photo-full.jpg" class="about-photo">
         <div class="half-page-gradient">
         <div class="about-info">
+
           <!-- <div> -->
             <!-- <img src="images/about-photo.png" class="profile-picture" alt="profile-picture"/> -->
          <!--  </div> -->
-          <div class="about-info-p">
-            <h3>hi :)</h3><br>
-            <p>I'm Jules, the designer / developer for Pulp. I'm a pretty laid back person who loves anything creative or challenging. Bonus if it's both!</p><br>
+          <div id="jules" class="about-info-p">
+            <h3>hi, I'm Julie</h3><br>
+            <p>I'm the designer and developer for Pulp. I'm a pretty laid back person who loves anything creative or challenging. Bonus if it's both!</p><br>
             <p>Message me and tell me a little about yourself and your project.</p><br>
-            <p>And of course, feel free to read a little more about me if you're the curious sort. test</p>
+            <p>And of course, feel free to read a little <a class="no-text-decoration" href="about.html">more about me</a> if you're the curious sort.</p>
           </div>
         </div>
       <div class="self-align-right-flex-end">
@@ -100,8 +106,8 @@
     </div>
   </div>
   </div>
-  <div class="half-page-gradient">
-  </div>
+</div>
+
     <script src="components.js"></script>
   </body>
 </html>

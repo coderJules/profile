@@ -12,18 +12,21 @@
     <script src="https://use.fontawesome.com/releases/v5.0.6/js/fontawesome.js"></script>
   </head>
     <body>
-    <header class="no-header">
+   <header class="no-header">
       <nav class="not-home">
         <div class="mobile-dropdown-nav">
-           <img src="images/pulp-logo-navbar.png" class="navbar-logo" alt="Pulp web design logo">
-          <button class="dropbtn"><i class="fas fa-bars"></i></button>
-            <div class="dropdown-content">
-              <a href="#">Our Work</a>
-              <a href="#">About</a>
+          <a href="index.html"><div class="navbar-logo"></div></a>
+         <div class="dropdown">
+            <div class="dropbtn" onclick="myFunction()"></div>
+              <div id="myDropdownHome" class="dropdown-content">
+                <a href="#work">Projects</a>
+                <a href="#jules">About</a>
+              </div>
             </div>
           </div>
-        </nav>
-      </header>
+        </div>
+      </nav>
+    </header>
 
   <div class=portfolio-title>
     <!-- <img src="images/tbm-logo.png"> -->
@@ -32,8 +35,17 @@
   </div>
 
 
+
 <div class="portfolio-wrapper">
-<img src="/images/tbm-home-mobile.jpg" class="portfolio-image">
+  <div class="computer-image">
+    <div class="foreground-tbm-picture">
+    </div>
+    <div class="background-picture">
+    </div>
+    <div class="img-shadow">
+    </div>
+  </div>
+
 <div class="business-div">
   <strong><h4>The challenge</h4></strong>
 
@@ -50,10 +62,8 @@
  <div class="portfolio-text">
     <p>We embedded our client's Square online scheduler into her website. This feature allows clients to schedule appointments at their convenience.</p>
   </div>
-<img src="/images/tbm-scheduler.jpg" class="portfolio-image">
-
-
-
+<div class="tbm-scheduler">
+</div>
 
  <div  class="portfolio-image-text">
     <h4>online forms</h4>
@@ -61,7 +71,8 @@
   <div class="portfolio-text">
     <p>While Squarespace allows for electronic forms, our client had a physical form that had content not possible to emulate digitally.  Instead we were able to upload the PDF for her clients to print and fill out before their appointment.</p>
   </div>
-<img src="/images/tbm-intake.jpg" class="portfolio-image">
+<div class="tbm-form">
+</div>
 </div>
 </body>
 </html>
