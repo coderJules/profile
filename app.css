@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,700|Varela+Round");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Roboto:100,300|Varela+Round");
 html, body {
   margin: 0;
   padding: 0; }
@@ -53,21 +53,31 @@ table {
 strong {
   font-weight: 700; }
 
+h2 {
+  font-size: 36px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 700; }
+
 h3 {
   font-size: 24px;
-  font-family: "Varela Round", sans-serif; }
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 400;
+  letter-spacing: -1px; }
 
 h4 {
-  font-family: "Roboto", sans-serif; }
+  font-size: 18px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0; }
 
 h6 {
   font-size: 15px;
   font-family: "Roboto", sans-serif; }
 
 p {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 300;
-  line-height: 15px;
+  line-height: 18px;
   font-family: "Roboto", sans-serif; }
 
 .no-text-decoration {
@@ -98,7 +108,7 @@ hr {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex; }
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 768px) and (min-height: 450px) {
     .mobile-dropdown-nav {
       height: 90px; } }
 
@@ -138,7 +148,7 @@ hr {
   -moz-align-self: middle;
   -ms-align-self: middle;
   align-self: middle; }
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 768px) and (min-height: 450px) {
     .dropbtn {
       padding: 32.5px 30px 32.5px 30px; } }
 
@@ -155,24 +165,24 @@ hr {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.1);
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   right: 0;
+  border-radius: 5px;
   font-family: "Roboto", sans-serif; }
 
 /* Links inside the dropdown */
 .dropdown-content a {
-  color: black;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
-  color: #23C06E; }
+  color: white; }
 
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
-  background-color: #ddd; }
+  background-color: #23C06E; }
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {
@@ -182,7 +192,7 @@ header {
   position: relative;
   z-index: 0;
   margin-top: -90px; }
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 768px) and (min-height: 450px) {
     header {
       height: 50vh; } }
   @media only screen and (min-width: 1026px) {
@@ -191,7 +201,7 @@ header {
 
 .video-div {
   display: none; }
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 768px) and (min-height: 450px) {
     .video-div {
       display: unset;
       position: fixed;
@@ -206,7 +216,7 @@ header {
     .video-div {
       height: 100%; } }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (min-height: 450px) {
   .video-div iframe {
     width: 100vw;
     height: 56.25vw;
@@ -260,9 +270,10 @@ header {
   flex-wrap: wrap; }
   .banner h3 {
     font-size: 28px;
-    letter-spacing: 10px;
+    letter-spacing: 8px;
     font-family: "Varela Round", sans-serif;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    margin-left: 5px; }
   .banner h4 {
     position: absolute;
     bottom: 20vh;
@@ -278,7 +289,13 @@ header {
     -moz-align-self: flex-end;
     -ms-align-self: flex-end;
     align-self: flex-end; }
-  @media only screen and (min-width: 768px) {
+  @media only screen and (max-height: 450px) and (orientation: landscape) {
+    .banner h3 {
+      font-size: 42px; }
+    .banner h4 {
+      font-size: 18px;
+      font-weight: 400; } }
+  @media only screen and (min-width: 768px) and (min-height: 450px) {
     .banner {
       background-image: none;
       text-align: center;
@@ -436,7 +453,7 @@ header {
   -ms-justify-content: center;
   justify-content: center;
   -ms-flex-pack: center; }
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 768px) and (min-height: 450px) {
     .full-page-text {
       -webkit-justify-content: center;
       -moz-justify-content: center;
@@ -456,7 +473,7 @@ header {
     margin: 10px;
     color: white;
     width: 100%; }
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 768px) and (min-height: 450px) {
       .full-page-text h4 {
         width: 535px; } }
     @media only screen and (min-width: 873px) {
@@ -465,7 +482,7 @@ header {
     @media only screen and (min-width: 1160px) {
       .full-page-text h4 {
         width: 10px; } }
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 768px) and (min-height: 450px) {
       .full-page-text h4 {
         margin: 0 30px 0 30px; } }
     @media only screen and (min-width: 961px) {
@@ -507,7 +524,7 @@ header {
   margin: 15px; }
   .one-of-two-block h3 {
     color: #23C06E;
-    font-family: "Varela Round", sans-serif;
+    font-family: 'Varela Round', sans-serif;
     margin: 10px 0;
     text-align: left; }
   .one-of-two-block p {
@@ -574,7 +591,7 @@ header {
   -ms-flex-pack: space-between; }
   #one-block-special h3 {
     color: #23C06E;
-    font-family: "Varela Round", sans-serif;
+    font-family: "Roboto Condensed", sans-serif;
     margin: 10px 0;
     text-align: left; }
   #one-block-special p {
@@ -692,7 +709,7 @@ header {
   -moz-align-self: center;
   -ms-align-self: center;
   align-self: center; }
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 768px) and (min-height: 450px) {
     .navbar-logo {
       height: 60px;
       margin: 11px 15px 19px 30px;
@@ -700,13 +717,13 @@ header {
 
 .not-home-about {
   background-color: transparent; }
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 768px) and (min-height: 450px) {
     .not-home-about {
       height: 90px; } }
 
 .not-home {
   background-color: #FDC54B; }
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 768px) and (min-height: 450px) {
     .not-home {
       height: 90px; } }
 
@@ -725,24 +742,31 @@ header {
 .portfolio-title {
   text-align: center;
   color: slategray;
-  padding: 90px 15px 15px 15px; }
+  padding: 115px 15px 15px 15px; }
   .portfolio-title h6 {
     padding-top: 15px;
     text-align: center;
     color: #23C06E;
-    font-weight: 100; }
+    font-weight: 300; }
 
 .business-div {
   overflow: auto;
   width: 85%;
-  margin: 90px auto;
+  margin: 0 auto;
+  margin-bottom: 60px;
   color: slategray; }
+  .business-div h4 {
+    font-size: 22px; }
+  @media only screen and (min-width: 961px) {
+    .business-div {
+      width: 60%; } }
 
 .computer-image {
   width: 100vw;
   margin: 0 auto;
   position: relative;
-  height: 250px; }
+  height: 250px;
+  margin-bottom: 30px; }
 
 .foreground-picture {
   content: url("images/banner-computer-dim-edit.png");
@@ -752,7 +776,7 @@ header {
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  width: 261px;
+  width: 240px;
   border-radius: 1px; }
 
 .background-picture {
@@ -764,84 +788,108 @@ header {
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  width: 340px; }
+  width: 320px; }
 
 .img-shadow {
   content: url("images/com_shadow.png");
   width: 295px;
   position: absolute;
-  top: 239px;
+  top: 225px;
   z-index: -2;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto; }
 
+.image-div {
+  width: 85vw;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 60px; }
+  @media only screen and (min-width: 768px) and (min-height: 450px) {
+    .image-div {
+      width: 60vw; } }
+
+img.porfolio-images {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0px 5px 30px; }
+
 .search-page-img {
   content: url("images/jreig-prop-comp-search.png");
   width: 100vw;
   margin: 0 auto;
   box-sizing: border-box;
-  padding: 0 30px 60px 30px; }
+  padding: 0 30px 60px 30px;
+  box-shadow: 3px 5px 10px rgba(40, 40, 40, 0.9); }
 
 .results-img {
   content: url("images/comp-results.jpg");
   width: 100vw;
   margin: 0 auto;
   box-sizing: border-box;
-  padding: 0 30px 60px 30px; }
+  padding: 0 30px 60px 30px;
+  box-shadow: 3px 5px 10px rgba(40, 40, 40, 0.9); }
 
 .map-img {
   content: url("images/result-map.jpg");
   width: 100vw;
   margin: 0 auto;
   box-sizing: border-box;
-  padding: 0 30px 60px 30px; }
+  padding: 0 30px 60px 30px;
+  box-shadow: 3px 5px 10px rgba(40, 40, 40, 0.9); }
 
 .list-img {
   content: url("images/result-list.jpg");
   width: 100vw;
   margin: 0 auto;
   box-sizing: border-box;
-  padding: 0 30px 60px 30px; }
+  padding: 0 30px 60px 30px;
+  box-shadow: 3px 5px 10px rgba(40, 40, 40, 0.9); }
 
 .table-img {
   content: url("images/result-table.jpg");
   width: 100vw;
   margin: 0 auto;
   box-sizing: border-box;
-  padding: 0 30px 60px 30px; }
+  padding: 0 30px 60px 30px;
+  box-shadow: 3px 5px 10px rgba(40, 40, 40, 0.9); }
 
 .new-est-img {
   content: url("images/jreig-items.png");
   width: 100vw;
   margin: 0 auto;
   box-sizing: border-box;
-  padding: 0 30px 60px 30px; }
+  padding: 0 30px 60px 30px;
+  box-shadow: 3px 5px 10px rgba(40, 40, 40, 0.9); }
 
 .item-img {
   content: url("images/line-item.png");
   width: 100vw;
   margin: 0 auto;
   box-sizing: border-box;
-  padding: 0 30px 60px 30px; }
+  padding: 0 30px 60px 30px;
+  box-shadow: 3px 5px 10px rgba(40, 40, 40, 0.9); }
 
 .est-calc-img {
   content: url("images/jreig-estimator.png");
   width: 100vw;
   margin: 0 auto;
   box-sizing: border-box;
-  padding: 0 30px 60px 30px; }
+  padding: 0 30px 60px 30px;
+  box-shadow: 3px 5px 10px rgba(40, 40, 40, 0.9); }
 
 .foreground-tbm-picture {
   content: url("images/tbm-home-mobile.jpg");
   position: absolute;
-  top: 20px;
+  top: 19px;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  width: 280px;
+  width: 240px;
+  border-radius: 1px;
   border-radius: 1px; }
 
 .tbm-scheduler {
@@ -849,24 +897,28 @@ header {
   width: 100vw;
   margin: 0 auto;
   box-sizing: border-box;
-  padding: 0 30px 60px 30px; }
+  padding: 0 30px 60px 30px;
+  box-shadow: 3px 5px 10px rgba(40, 40, 40, 0.9); }
+  .tbm-scheduler img {
+    box-shadow: 2px 5px 5px black; }
 
 .tbm-form {
   content: url("images/tbm-intake.jpg");
   width: 100vw;
   margin: 0 auto;
   box-sizing: border-box;
-  padding: 0 30px 60px 30px; }
+  padding: 0 30px 60px 30px;
+  box-shadow: 3px 5px 10px rgba(40, 40, 40, 0.9); }
 
 .foreground-rmm-picture {
   content: url("images/rmm-banner.png");
   position: absolute;
-  top: 20px;
+  top: 19px;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  width: 280px;
+  width: 261px;
   border-radius: 1px; }
 
 .rmm-services {
@@ -874,28 +926,32 @@ header {
   width: 100vw;
   margin: 0 auto;
   box-sizing: border-box;
-  padding: 0 30px 60px 30px; }
+  padding: 0 30px 60px 30px;
+  box-shadow: 3px 5px 10px rgba(40, 40, 40, 0.9); }
 
 .rmm-testimonials {
   content: url("images/ryan_mayer_motivation/rmm-testimonials.jpg");
   width: 100vw;
   margin: 0 auto;
   box-sizing: border-box;
-  padding: 0 30px 60px 30px; }
+  padding: 0 30px 60px 30px;
+  box-shadow: 3px 5px 10px rgba(40, 40, 40, 0.9); }
 
 .rmm-media {
   content: url("images/ryan_mayer_motivation/rmm-media.jpg");
   width: 100vw;
   margin: 0 auto;
   box-sizing: border-box;
-  padding: 0 30px 60px 30px; }
+  padding: 0 30px 60px 30px;
+  box-shadow: 3px 5px 10px rgba(40, 40, 40, 0.9); }
 
 .rmm-recommends {
   content: url("images/ryan_mayer_motivation/rmm-recommends.jpg");
   width: 100vw;
   margin: 0 auto;
   box-sizing: border-box;
-  padding: 0 30px 60px 30px; }
+  padding: 0 30px 60px 30px;
+  box-shadow: 3px 5px 10px rgba(40, 40, 40, 0.9); }
 
 .portfolio-image:nth-of-type(1) {
   margin-bottom: 0; }
@@ -910,23 +966,34 @@ header {
   border: 0 3px 0 3px solid #23C06E; }
   .portfolio-text p {
     margin-top: 15px; }
+  .portfolio-text a {
+    color: slategray; }
   .portfolio-text h4 {
-    margin-top: 15px;
+    margin-top: 60px;
     font-weight: 300;
     color: #23C06E;
     font-weight: 400;
-    text-align: center; }
+    text-align: left; }
+  @media only screen and (min-width: 961px) {
+    .portfolio-text {
+      width: 60%; } }
 
 .portfolio-image-text {
-  color: white;
-  height: 60px;
-  background-color: #23C06E;
-  line-height: 60px;
-  width: 100vw; }
+  color: #23C06E;
+  width: 85vw;
+  margin-top: 60px;
+  margin: 0 auto; }
+  .portfolio-image-text h3 {
+    color: slategray; }
   .portfolio-image-text h4 {
-    padding: 0 30px;
-    box-shadow: 1px 1px 2px rgba(1, 1, 1, 0.3);
+    text-align: left;
     font-weight: 500; }
+  @media only screen and (min-width: 961px) {
+    .portfolio-image-text {
+      width: 60%;
+      margin: 0 auto; }
+      .portfolio-image-text h4 {
+        text-align: center; } }
 
 .profile {
   content: url("images/profile-about-page.jpg");
@@ -972,6 +1039,10 @@ header {
     font-weight: 200;
     padding-bottom: 60px;
     color: rgba(255, 255, 255, 0.9); }
+  @media only screen and (max-height: 450px) and (orientation: landscape) {
+    .about-text {
+      background-size: 50vw;
+      background-position: left; } }
   @media only screen and (min-width: 961px) {
     .about-text {
       margin: 0 30px;
@@ -1009,7 +1080,7 @@ header {
 
 .about-paragraph {
   padding-bottom: 30px; }
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 768px) and (min-height: 450px) {
     .about-paragraph {
       height: auto;
       display: -webkit-box;
@@ -1027,7 +1098,7 @@ header {
       justify-content: middle;
       -ms-flex-pack: middle; } }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (min-height: 450px) {
   .column-half-page {
     width: 68%;
     background-color: whitesmoke;
@@ -1039,7 +1110,7 @@ header {
     -ms-flex-grow: 1;
     flex-grow: 1; } }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (min-height: 450px) {
   .brin {
     content: url("images/brin.png");
     width: 200px;
@@ -1061,11 +1132,11 @@ header {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex; }
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 768px) and (min-height: 450px) {
     .mobile-brin {
       display: none; } }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (min-height: 450px) {
   .windmill {
     content: url(images/windmill.png);
     width: 150px;
@@ -1088,7 +1159,7 @@ header {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex; }
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 768px) and (min-height: 450px) {
     .mobile-windmill {
       display: none; } }
 
@@ -1127,6 +1198,8 @@ header {
   padding: 30px 0px 0px 0px;
   margin: 0 auto;
   width: 100%; }
+  .about-info h3 {
+    font-family: 'Varela Round', sans-serif; }
   @media only screen and (min-width: 961px) {
     .about-info {
       position: relative;
@@ -1144,6 +1217,27 @@ header {
   background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(17, 17, 17, 0.1) 13%, rgba(0, 0, 0, 0.8) 100%);
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(17, 17, 17, 0.1) 13%, rgba(0, 0, 0, 0.8) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 ); }
+  @media only screen and (max-height: 450px) and (orientation: landscape) {
+    .half-page-gradient {
+      right: 0;
+      width: 50vw;
+      background: none;
+      color: slategray;
+      height: 100%;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      -ms-justify-content: center;
+      justify-content: center;
+      -ms-flex-pack: center; } }
   @media only screen and (min-width: 961px) {
     .half-page-gradient {
       box-shadow: 1px 3px 20px rgba(1, 1, 1, 0.3);
@@ -1190,6 +1284,17 @@ header {
   color: white;
   line-height: 15px;
   font-weight: 100; }
+  @media only screen and (max-height: 450px) and (orientation: landscape) {
+    .about-info-p {
+      color: slategray; }
+      .about-info-p h3 {
+        font-family: 'Varela Round', sans-serif; }
+      .about-info-p a {
+        color: slategray; } }
+  @media only screen and (max-height: 450px) and (orientation: landscape) {
+    .about-info-p {
+      padding: 0;
+      width: 80%; } }
   @media only screen and (min-width: 961px) {
     .about-info-p {
       color: whitesmoke;
@@ -1200,7 +1305,7 @@ header {
         font-size: 46px;
         margin-bottom: 15px;
         line-height: 50px;
-        font-family: "Varela Round", sans-serif; }
+        font-family: "Roboto Condensed", sans-serif; }
       .about-info-p p {
         font-size: 16px;
         font-weight: 300;
@@ -1226,6 +1331,11 @@ header {
     .self-align-right-flex-end button:hover {
       color: white;
       background-color: #23C06E; }
+  @media only screen and (max-height: 450px) and (orientation: landscape) {
+    .self-align-right-flex-end {
+      padding: 0; }
+      .self-align-right-flex-end button {
+        margin: 15px 0 30px 0; } }
   @media only screen and (min-width: 961px) {
     .self-align-right-flex-end {
       padding: 0; }
