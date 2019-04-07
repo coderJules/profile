@@ -641,9 +641,7 @@ h4 {
       font-weight: 100;
       letter-spacing: 5px;
     }
-
   }
-
 }
 
 .banner-text {
@@ -804,7 +802,7 @@ h4 {
   // }
   @include justify-content(space-between) {
   }
-  height: 200px;
+  height: auto;
   margin: 15px;
   h3 {
     color: $green;
@@ -823,7 +821,8 @@ h4 {
     color: $font-medium-color;
   }
   p:nth-child(1) {
-    color: $font-light-color;
+    color: $font-medium-color;
+    font-weight: 600;
   }
   button {
     margin: 10px 0;
@@ -834,7 +833,7 @@ h4 {
     @include green-button() {
     }
   }
-  @include xl {
+  @include lg {
     text-align: center;
     h3 {
       text-align: center;
@@ -950,7 +949,7 @@ h4 {
 
 .self-flex-end {
   text-align: left;
-  @include xl {
+  @include lg {
     text-align: center;
   }
 }
@@ -984,6 +983,15 @@ h4 {
   background-color: #FDC54B;
   @include ipad {
     height: 90px;
+  }
+  a {
+    color: $font-dark-color;
+  }
+  a:hover {
+    color: white;
+  }
+  .dropdown-content {
+    background-color: white;
   }
 }
 
@@ -1028,8 +1036,11 @@ h4 {
   h4 {
     font-size: 22px;
   }
-  @include lg {
+  @include md {
     width: 60%;
+  }
+  @include xl {
+    width: 50%
   }
 }
 
@@ -1091,6 +1102,9 @@ h4 {
   margin-bottom: 60px;
     @include ipad {
       width: 60vw;
+    }
+    @include xl {
+      width: 50%;
     }
 }
 
@@ -1240,8 +1254,11 @@ img.porfolio-images {
   text-align: left;
   // margin-bottom: -15px;
   }
-  @include lg {
+  @include md {
     width: 60%;
+  }
+  @include xl {
+    width: 50%;
   }
 }
 
@@ -1257,12 +1274,15 @@ img.porfolio-images {
     text-align: left;
    font-weight: 500;
   }
-  @include lg {
+  @include md {
     width: 60%;
     margin: 0 auto;
     h4 {
-      text-align: center;
+      text-align: left;
     }
+  }
+  @include xl {
+    width: 50%;
   }
 }
 
@@ -1645,5 +1665,13 @@ li {
 .test {
   background-color: $green;
 }
+
+// footer
+footer {
+  height: 160px;
+}
+
+
+
 
 

@@ -520,7 +520,7 @@ header {
   -ms-justify-content: space-between;
   justify-content: space-between;
   -ms-flex-pack: space-between;
-  height: 200px;
+  height: auto;
   margin: 15px; }
   .one-of-two-block h3 {
     color: #23C06E;
@@ -535,7 +535,8 @@ header {
     font-family: "Roboto", sans-serif;
     color: #A9B4C0; }
   .one-of-two-block p:nth-child(1) {
-    color: white; }
+    color: #A9B4C0;
+    font-weight: 600; }
   .one-of-two-block button {
     margin: 10px 0;
     border-radius: 5px;
@@ -564,7 +565,7 @@ header {
     .one-of-two-block .green-button:hover {
       opacity: .7;
       box-shadow: 1px 1px 1px rgba(1, 1, 1, 0.3); }
-  @media only screen and (min-width: 1026px) {
+  @media only screen and (min-width: 961px) {
     .one-of-two-block {
       text-align: center; }
       .one-of-two-block h3 {
@@ -707,7 +708,7 @@ header {
 
 .self-flex-end {
   text-align: left; }
-  @media only screen and (min-width: 1026px) {
+  @media only screen and (min-width: 961px) {
     .self-flex-end {
       text-align: center; } }
 
@@ -737,6 +738,12 @@ header {
   @media only screen and (min-width: 768px) and (min-height: 450px) {
     .not-home {
       height: 90px; } }
+  .not-home a {
+    color: slategray; }
+  .not-home a:hover {
+    color: white; }
+  .not-home .dropdown-content {
+    background-color: white; }
 
 .no-header {
   background-color: transparent;
@@ -768,9 +775,12 @@ header {
   color: slategray; }
   .business-div h4 {
     font-size: 22px; }
-  @media only screen and (min-width: 961px) {
+  @media only screen and (min-width: 641px) {
     .business-div {
       width: 60%; } }
+  @media only screen and (min-width: 1026px) {
+    .business-div {
+      width: 50%; } }
 
 .computer-image {
   width: 100vw;
@@ -820,6 +830,9 @@ header {
   @media only screen and (min-width: 768px) and (min-height: 450px) {
     .image-div {
       width: 60vw; } }
+  @media only screen and (min-width: 1026px) {
+    .image-div {
+      width: 50%; } }
 
 img.porfolio-images {
   width: 100%;
@@ -962,9 +975,12 @@ img.porfolio-images {
     color: #23C06E;
     font-weight: 400;
     text-align: left; }
-  @media only screen and (min-width: 961px) {
+  @media only screen and (min-width: 641px) {
     .portfolio-text {
       width: 60%; } }
+  @media only screen and (min-width: 1026px) {
+    .portfolio-text {
+      width: 50%; } }
 
 .portfolio-image-text {
   color: #23C06E;
@@ -976,12 +992,15 @@ img.porfolio-images {
   .portfolio-image-text h4 {
     text-align: left;
     font-weight: 500; }
-  @media only screen and (min-width: 961px) {
+  @media only screen and (min-width: 641px) {
     .portfolio-image-text {
       width: 60%;
       margin: 0 auto; }
       .portfolio-image-text h4 {
-        text-align: center; } }
+        text-align: left; } }
+  @media only screen and (min-width: 1026px) {
+    .portfolio-image-text {
+      width: 50%; } }
 
 .profile {
   content: url("images/profile-about-page.jpg");
@@ -1349,5 +1368,8 @@ li p {
 
 .test {
   background-color: #23C06E; }
+
+footer {
+  height: 160px; }
 
 /*# sourceMappingURL=app.css.map */
