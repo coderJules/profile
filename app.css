@@ -527,6 +527,9 @@ header {
     font-family: 'Varela Round', sans-serif;
     margin: 10px 0;
     text-align: left; }
+    @media only screen and (min-width: 1026px) {
+      .one-of-two-block h3 {
+        text-align: center; } }
   .one-of-two-block p {
     margin: 5px 0;
     font-family: "Roboto", sans-serif;
@@ -561,6 +564,11 @@ header {
     .one-of-two-block .green-button:hover {
       opacity: .7;
       box-shadow: 1px 1px 1px rgba(1, 1, 1, 0.3); }
+  @media only screen and (min-width: 1026px) {
+    .one-of-two-block {
+      text-align: center; }
+      .one-of-two-block h3 {
+        text-align: center; } }
 
 #one-block-special {
   display: -webkit-box;
@@ -699,6 +707,9 @@ header {
 
 .self-flex-end {
   text-align: left; }
+  @media only screen and (min-width: 1026px) {
+    .self-flex-end {
+      text-align: center; } }
 
 .navbar-logo {
   content: url("images/pulp-logo-png.png");
@@ -816,14 +827,6 @@ img.porfolio-images {
   text-align: center;
   box-shadow: 0px 5px 30px; }
 
-.search-page-img {
-  content: url("images/jreig-prop-comp-search.png");
-  width: 100vw;
-  margin: 0 auto;
-  box-sizing: border-box;
-  padding: 0 30px 60px 30px;
-  box-shadow: 3px 5px 10px rgba(40, 40, 40, 0.9); }
-
 .results-img {
   content: url("images/comp-results.jpg");
   width: 100vw;
@@ -918,24 +921,9 @@ img.porfolio-images {
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  width: 261px;
+  width: 240px;
+  border-radius: 1px;
   border-radius: 1px; }
-
-.rmm-services {
-  content: url("images/ryan_mayer_motivation/rmm-services.jpg");
-  width: 100vw;
-  margin: 0 auto;
-  box-sizing: border-box;
-  padding: 0 30px 60px 30px;
-  box-shadow: 3px 5px 10px rgba(40, 40, 40, 0.9); }
-
-.rmm-testimonials {
-  content: url("images/ryan_mayer_motivation/rmm-testimonials.jpg");
-  width: 100vw;
-  margin: 0 auto;
-  box-sizing: border-box;
-  padding: 0 30px 60px 30px;
-  box-shadow: 3px 5px 10px rgba(40, 40, 40, 0.9); }
 
 .rmm-media {
   content: url("images/ryan_mayer_motivation/rmm-media.jpg");
@@ -1007,6 +995,9 @@ img.porfolio-images {
   color: slategray; }
 .about-page h3 {
   color: #23C06E; }
+
+.padding-bottom {
+  margin-bottom: 15px; }
 
 .about-text {
   position: relative;

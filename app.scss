@@ -813,6 +813,9 @@ h4 {
     // letter-spacing: 5px;
     margin: 10px 0;
     text-align: left;
+    @include xl {
+      text-align: center;
+    }
   }
   p {
     margin: 5px 0;
@@ -829,6 +832,12 @@ h4 {
   }
   .green-button {
     @include green-button() {
+    }
+  }
+  @include xl {
+    text-align: center;
+    h3 {
+      text-align: center;
     }
   }
 }
@@ -941,6 +950,9 @@ h4 {
 
 .self-flex-end {
   text-align: left;
+  @include xl {
+    text-align: center;
+  }
 }
 
 //PORTFOLIO PAGE PORTFOLIO.HTML --------
@@ -1089,13 +1101,6 @@ img.porfolio-images {
     box-shadow: 0px 5px 30px;
     }
 
-
-.search-page-img {
-  content:url("images/jreig-prop-comp-search.png");
-  @include portfolio-image() {
-  }
-}
-
 .results-img {
   content:url("images/comp-results.jpg");
   @include portfolio-image() {
@@ -1179,21 +1184,22 @@ img.porfolio-images {
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  width: 261px;
+  width: 240px;
+  border-radius: 1px;
   border-radius: 1px;
 }
 
-.rmm-services {
-  content:url("images/ryan_mayer_motivation/rmm-services.jpg");
-  @include portfolio-image() {
-  }
-}
+// .rmm-services {
+//   content:url("images/ryan_mayer_motivation/rmm-services.jpg");
+//   @include portfolio-image() {
+//   }
+// }
 
-.rmm-testimonials {
-  content:url("images/ryan_mayer_motivation/rmm-testimonials.jpg");
-  @include portfolio-image() {
-  }
-}
+// .rmm-testimonials {
+//   content:url("images/ryan_mayer_motivation/rmm-testimonials.jpg");
+//   @include portfolio-image() {
+//   }
+// }
 
 .rmm-media {
   content:url("images/ryan_mayer_motivation/rmm-media.jpg");
@@ -1287,6 +1293,10 @@ img.porfolio-images {
   h3 {
     color: $green;
   }
+}
+
+.padding-bottom {
+  margin-bottom: 15px;
 }
 
 .about-text {
