@@ -505,13 +505,18 @@ header {
   position: relative;
   z-index: 0;
   margin-top: -70px;
+  height: calc(100 + 40px);
+   @include landscape-mobile {
+    height: 100vh;
+  }
   @include ipad {
     height: 50vh;
   }
-  @include landscape-mobile {
-    height: calc(100vh - 70px);
-  }
   @include lg {
+    height: 50vh;
+  }
+
+  @include xl {
     height: 100vh;
   }
 }
@@ -668,7 +673,7 @@ header {
       line-height: 60px;
       color: $font-dark-color;
       font-size: 40px;
-      padding: 0 90px 240px 90px;
+      padding: 0 90px 90px 90px;
       line-height: 81px;
       font-family: "Varela Round", sans-serif;
       background: linear-gradient(to right, #fa4559 0%, #fa4559 100%);
@@ -691,7 +696,6 @@ header {
   @include lg {
     h1 {
       font-size: 56px;
-      padding: 0 90px 240px 90px;
     }
     h4 {
       font-size: 36px;
@@ -811,7 +815,7 @@ header {
   background-image: url('images/orange-pink-mobile.jpg');
   background-size: cover;
   background-position: center;
-  height: calc(100vh - 70px);
+  height: calc(100vh + 40px);
   text-shadow: 1px 1px 5px rgba(1, 1, 1, .1);
   object-fit: cover;
   text-align: center;
@@ -868,9 +872,9 @@ header {
   }
   /* overflow: hidden; */
   @include landscape-mobile {
-    height: calc(100vh - 70px);
+    height: 100vh;
     h2 {
-      bottom: 25vh;
+      bottom: 35vh;
       font-weight: 700;
     }
     h3 {
@@ -924,18 +928,24 @@ header {
       letter-spacing: 5px;
     }
   }
-  @include landscape-mobile {
-    height: calc(100vh + 40px);
-  }
   @include landscape-ipad {
     height: calc(50vh + 40px);
     top: calc(50vh - 30px);
+  }
+  @include lg {
+    h2 {
+      bottom: 10vh;
+    }
   }
   @include xl {
     height: calc(50vh + 40px);
     width: 100vw;
     top: calc(50vh - 40px);
     color: white;
+    h2 {
+      bottom: 35vh;
+      font-weight: 400;
+    }
    h3 {
       font-size: 80px;
       letter-spacing: 10px;
