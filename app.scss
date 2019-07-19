@@ -58,11 +58,12 @@ strong {
   font-weight: 700;
 }
 
-//end meyer css
+/*end meyer css */
 
 
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Roboto:100,300|Varela+Round');
-//VARIABLES
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,700|Varela+Round');
+
+/*VARIABLES*/
 
 $font-light-color: white;
 $font-medium-color: #A9B4C0;
@@ -79,7 +80,7 @@ $button-font-size: 14px;
 $light-page-background-color: white;
 $green: #23C06E;
 $gray: rgba(43, 45, 66, .9);
-// #352D39; #544E61
+/* #352D39; #544E61 */
 
 h1 {
   font-size: 24px;
@@ -127,8 +128,8 @@ hr {
   color: $font-dark-color;
 }
 
-//MIXINS -----------------------------------
-//BUTTON MIXINS ----------------------------
+/*MIXINS -----------------------------------
+BUTTON MIXINS ---------------------------- */
 
 @mixin green-ghost-button {
  border-radius: 5px;
@@ -141,30 +142,30 @@ hr {
  text-transform: uppercase;
  padding: 10px 15px;
  letter-spacing: $button-letter-spacing;
-   &:hover {
-     color: white;
-     background-color: $green;
-     cursor: pointer;
-   }
+  &:hover {
+    color: white;
+    background-color: $green;
+    cursor: pointer;
+  }
  @content;
 }
 
 @mixin green-button {
- border-radius: 5px;
- color: white;
- background-color: $green;
- width: 125px;
- font-family: $font-buttons;
- font-size: $button-font-size;
- text-transform: uppercase;
- padding: 10px 15px;
- letter-spacing: $button-letter-spacing;
-   &:hover {
+  border-radius: 5px;
+  color: white;
+  background-color: $green;
+  width: 125px;
+  font-family: $font-buttons;
+  font-size: $button-font-size;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  letter-spacing: $button-letter-spacing;
+  &:hover {
     opacity: .9;
     background-color: orange;
     box-shadow: 1px 1px 1px rgba(1, 1, 1, .3);
     cursor: pointer;
-   }
+  }
  @content;
 }
 
@@ -178,7 +179,7 @@ hr {
 }
 
 
-//MIXINS FLEXBOX
+/*MIXINS FLEXBOX*/
 
 @mixin flexbox() {
   display: -webkit-box;
@@ -189,9 +190,9 @@ hr {
 @content;
 }
 
-// The 'flex' shorthand
+/* The 'flex' shorthand
 // - applies to: flex items
-// <positive-number>, initial, auto, or none
+// <positive-number>, initial, auto, or none */
 @mixin flex($values) {
   -webkit-box-flex: $values;
      -moz-box-flex: $values;
@@ -201,9 +202,9 @@ hr {
 @content;
 }
 
-// Flex Flow Direction
+/* Flex Flow Direction
 // - applies to: flex containers
-// row | row-reverse | column | column-reverse
+// row | row-reverse | column | column-reverse*/
 @mixin flex-direction($direction) {
   -webkit-flex-direction: $direction;
      -moz-flex-direction: $direction;
@@ -212,9 +213,9 @@ hr {
 @content;
 }
 
-// Flex Line Wrapping
+/* Flex Line Wrapping
 // - applies to: flex containers
-// nowrap | wrap | wrap-reverse
+// nowrap | wrap | wrap-reverse */
 @mixin flex-wrap($wrap) {
   -webkit-flex-wrap: $wrap;
      -moz-flex-wrap: $wrap;
@@ -223,9 +224,9 @@ hr {
 @content;
 }
 
-// Flex Direction and Wrap
+/* Flex Direction and Wrap
 // - applies to: flex containers
-// <flex-direction> || <flex-wrap>
+// <flex-direction> || <flex-wrap> */
 @mixin flex-flow($flow) {
   -webkit-flex-flow: $flow;
      -moz-flex-flow: $flow;
@@ -234,9 +235,9 @@ hr {
 @content;
 }
 
-// Display Order
+/* Display Order
 // - applies to: flex items
-// <integer>
+// <integer> */
 @mixin order($val) {
   -webkit-box-ordinal-group: $val;
      -moz-box-ordinal-group: $val;
@@ -246,9 +247,9 @@ hr {
 @content;
 }
 
-// Flex grow factor
+/* Flex grow factor
 // - applies to: flex items
-// <number>
+// <number> */
 @mixin flex-grow($grow) {
   -webkit-flex-grow: $grow;
      -moz-flex-grow: $grow;
@@ -257,9 +258,9 @@ hr {
 @content;
 }
 
-// Flex shrink
+/* Flex shrink
 // - applies to: flex item shrink factor
-// <number>
+// <number> */
 @mixin flex-shrink($shrink) {
   -webkit-flex-shrink: $shrink;
      -moz-flex-shrink: $shrink;
@@ -268,10 +269,10 @@ hr {
 @content;
 }
 
-// Flex basis
+/* Flex basis
 // - the initial main size of the flex item
 // - applies to: flex itemsnitial main size of the flex item
-// <width>
+// <width> */
 @mixin flex-basis($width) {
   -webkit-flex-basis: $width;
      -moz-flex-basis: $width;
@@ -280,9 +281,9 @@ hr {
 @content;
 }
 
-// Axis Alignment
+/* Axis Alignment
 // - applies to: flex containers
-// flex-start | flex-end | center | space-between | space-around
+// flex-start | flex-end | center | space-between | space-around */
 @mixin justify-content($justify) {
   -webkit-justify-content: $justify;
      -moz-justify-content: $justify;
@@ -292,9 +293,9 @@ hr {
 @content;
 }
 
-// Packing Flex Lines
+/* Packing Flex Lines
 // - applies to: multi-line flex containers
-// flex-start | flex-end | center | space-between | space-around | stretch
+// flex-start | flex-end | center | space-between | space-around | stretch */
 @mixin align-content($align) {
   -webkit-align-content: $align;
      -moz-align-content: $align;
@@ -303,9 +304,9 @@ hr {
 @content;
 }
 
-// Cross-axis Alignment
+/* Cross-axis Alignment
 // - applies to: flex containers
-// flex-start | flex-end | center | baseline | stretch
+// flex-start | flex-end | center | baseline | stretch */
 @mixin align-items($align) {
   -webkit-align-items: $align;
      -moz-align-items: $align;
@@ -314,9 +315,9 @@ hr {
 @content;
 }
 
-// Cross-axis Alignment
+/* Cross-axis Alignment
 // - applies to: flex items
-// auto | flex-start | flex-end | center | baseline | stretch
+// auto | flex-start | flex-end | center | baseline | stretch */
 @mixin align-self($align) {
   -webkit-align-self: $align;
      -moz-align-self: $align;
@@ -325,7 +326,7 @@ hr {
   @content;
 }
 
-//RESPONSIVE DESIGN MIXINS ------------------------
+/*RESPONSIVE DESIGN MIXINS ------------------------ */
 
 @mixin xs {
   @media only screen and (min-width: 320px) {
@@ -333,20 +334,26 @@ hr {
   }
 }
 
-//smartphones, small tablets, landscape iPhone
+/* smartphones, small tablets, landscape iPhone */
 @mixin sm {
   @media only screen and (min-width: 480px) {
     @content;
   }
 }
 
-@mixin landscape {
+@mixin landscape-mobile {
   @media only screen and (max-height: 450px) and (orientation: landscape) {
     @content;
   }
 }
 
-//portrait tablets
+@mixin landscape-ipad {
+  @media only screen and (max-height: 780px) and (orientation: landscape) {
+    @content;
+  }
+}
+
+/* portrait tablets */
 @mixin md {
   @media only screen and (min-width: 641px) {
     @content;
@@ -359,14 +366,14 @@ hr {
   }
 }
 
-//landscape iPad, low res laptops and desktops
+/*landscape iPad, low res laptops and desktops */
 @mixin lg {
   @media only screen and (min-width: 961px) {
     @content;
   }
 }
 
-//big landscape tablets, laptops, desktops
+/* big landscape tablets, laptops, desktops */
 @mixin xl {
   @media only screen and (min-width: 1026px) {
     @content;
@@ -385,7 +392,7 @@ hr {
   }
 }
 
-//-----------------------------------
+/*----------------------------------- */
 
 
 .mobile-dropdown-nav {
@@ -434,10 +441,10 @@ hr {
   content:url("images/hamburger-menu.png");
   @include align-self(middle) {
   }
-    @include ipad {
-      padding: 32.5px 30px 32.5px 30px;
-    }
+  @include ipad {
+    padding: 32.5px 30px 32.5px 30px;
   }
+}
 
 
 /* Dropdown button on hover & focus */
@@ -470,7 +477,6 @@ hr {
   text-decoration: none;
   display: block;
   color: white;
-
 }
 
 /* Change color of dropdown links on hover */
@@ -487,12 +493,13 @@ hr {
   text-decoration: none;
 }
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+
 .show {
   display:block;
 }
 
 
-//HOME PAGE - HEADER --------------------------------
+/*HOME PAGE - HEADER -------------------------------- */
 
 header {
   position: relative;
@@ -501,23 +508,15 @@ header {
   @include ipad {
     height: 50vh;
   }
-  // height: 44vh;
-  // background: #23C06E;
-  // background-size: cover;
-  // border-bottom-left-radius: 48% 13%;
-  // width: 100%;
-  @include xl {
+  @include lg {
     height: 100vh;
   }
-}
-
-.cognito:not(.c-forms-actionBar) {
 }
 
 .form-page {
   z-index: -1;
   position: relative;
-  padding: 90px 30px;
+  padding: 90px 30px 120px 30px;
   height: auto;
   @include flexbox() {
   }
@@ -530,7 +529,6 @@ header {
   @include lg {
     @include flex-direction(row) {
     }
-    // padding: 100px 30px;
   }
 }
 
@@ -542,12 +540,12 @@ header {
   @include lg {
     @include flex-direction(row) {
     }
-    // padding: 100px 30px;
   }
 }
 
 
 .map {
+  padding-bottom: 30px;
   @include align-self(center) {
   }
   border-sizing: border-box;
@@ -566,46 +564,65 @@ header {
     text-align: center;
     text-decoration: none;
   }
-  padding-bottom: 30px;
   @include ipad {
     width: 50vh;
     height: 50vh;
     padding-top: 0px;
     padding-bottom: 0;
     margin: 160px 90px 0 90px;
-  h4 {
-    font-family: $font-content;
-    font-size: 24px;
-    color: $font-dark-color;
-    font-weight: 700;
+    h4 {
+      font-family: $font-content;
+      font-size: 24px;
+      color: $font-dark-color;
+      font-weight: 700;
+    }
+    h3 {
+      font-weight: 700;
+      font-size: 32px;
+      padding-bottom: 30px;
+      color: $green;
+    }
+    p {
+      font-family: $font-content;
+      font-size: 16px;
+      color: $font-dark-color;
+      padding-bottom: 30px;
+    }
+    iframe#mapcanvas {
+      @include lg {
+        width: 66vw;
+        height: 66vw;
+      }
+    }
+  }
 
-
-  }
-  h3 {
-    font-weight: 700;
-    font-size: 32px;
-    padding-bottom: 30px;
-    color: $green;
-  }
-  p {
-    font-family: $font-content;
-    font-size: 16px;
-    color: $font-dark-color;
-     padding-bottom: 30px;
-  }
-}
-@include lg {
-  width: 30vw;
-  height: 30vw;
-  padding-top: 240px;
-  padding-left: 110px;
-  padding-bottom: 400px;
+  @include lg {
+    width: 100vw;
   }
 }
 
 .map-address {
   h4 {
   margin-top: 15px;
+  font-family: $font-content;
+  font-size: 24px;
+  color: $font-dark-color;
+  font-weight: 300;
+  padding-bottom: 60px;
+  }
+}
+
+.map-div {
+    width: 80vw;
+    height: 80vw;
+    margin: 0 auto;
+  @include ipad {
+    width: 66vw;
+    height: 66vw;
+  }
+  @include lg {
+    width: 33vw;
+    height: 33vw;
   }
 }
 
@@ -615,10 +632,9 @@ header {
   padding-top: 90px;
   padding-bottom: 20px;
   text-align: center;
-
   h1 {
     color: $font-dark-color;
-    font-size: 24px;
+    font-size: 32px;
     padding: 20px 0 90px 0;
     line-height: 33px;
     font-family: "Varela Round", sans-serif;
@@ -626,33 +642,59 @@ header {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+  h4 {
+      font-family: $font-content;
+      font-size: 24px;
+      color: $font-dark-color;
+      font-weight: 300;
+      text-decoration: none;
+    }
+    h3 {
+      font-weight: 300;
+      font-size: 32px;
+      padding-bottom: 30px;
+      color: $green;
+      text-decoration: none;
+    }
   @include ipad {
-  padding-top: 160px;
-  h1 {
-    font-size: 40px;
-    padding: 0;
-    line-height: 60px;
-  }
-
-  width: 100%;
-  padding-top: 240px;
-  text-align: center;
-  h1 {
-    color: $font-dark-color;
-    font-size: 40px;
-    padding: 0 90px;
-    line-height: 81px;
-    font-family: "Varela Round", sans-serif;
-    background: linear-gradient(to right, #fa4559 0%, #fa4559 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-}
-  @include lg {
+    width: 100%;
     padding-top: 240px;
+    text-align: center;
+    h1 {
+      font-size: 40px;
+      line-height: 60px;
+      color: $font-dark-color;
+      font-size: 40px;
+      padding: 0 90px 240px 90px;
+      line-height: 81px;
+      font-family: "Varela Round", sans-serif;
+      background: linear-gradient(to right, #fa4559 0%, #fa4559 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    h4 {
+      font-family: $font-content;
+      font-size: 24px;
+      color: $font-dark-color;
+      font-weight: 300;
+    }
+    h3 {
+      font-weight: 300;
+      font-size: 32px;
+      padding-bottom: 30px;
+      color: $green;
+    }
+    p {
+      font-family: $font-content;
+      font-size: 16px;
+      color: $font-dark-color;
+      padding-bottom: 30px;
+    }
+  }
+  @include lg {
     h1 {
       font-size: 56px;
-      padding: 0 90px;
+      padding: 0 90px 240px 90px;
     }
   }
 }
@@ -714,7 +756,6 @@ header {
   @include ipad {
     display: unset;
     position: fixed;
-    // margin-top: -90px;
     top: 0;
     left: 0;
     width: 100%;
@@ -723,6 +764,10 @@ header {
     pointer-events: none;
     overflow: hidden;
   }
+  @include landscape-ipad {
+    height: 100%;
+  }
+
     @include xl {
       height: 100%;
     }
@@ -738,6 +783,9 @@ header {
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
+  }
+  @include landscape-ipad {
+    min-height: 100vh;
   }
   @include xl {
     min-height: 100vh;
@@ -758,34 +806,6 @@ header {
   color: white;
   position: relative;
   z-index: 0;
- h1 {
-    font-size: 42px;
-    font-weight: 700;
-    letter-spacing: 8px;
-    font-family: "Varela Round", sans-serif;
-    text-transform: uppercase;
-    margin-left: 5px;
-      @include lg {
-      font-family: "Varela Round", sans-serif;
-      font-size: 72px;
-    }
-  }
-h2 {
-    position: absolute;
-    bottom: 20vh;
-    font-size: 22px;
-    font-weight: 700;
-    letter-spacing: 5px;
-    width: 100vw;
-    left: 0;
-    right: 0;
-    font-family: $font-headers;
-    @include lg {
-      font-size: 36px;
-    }
-  }
-  // overflow: hidden;
-  position: relative;
   @include flexbox() {
   }
   @include flex-direction(column) {
@@ -801,7 +821,38 @@ h2 {
     @include align-self(flex-end) {
     }
   }
-  @include landscape {
+  h1 {
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: 8px;
+    font-family: "Varela Round", sans-serif;
+    text-transform: uppercase;
+    margin-left: 5px;
+      @include lg {
+      font-family: "Varela Round", sans-serif;
+      font-size: 72px;
+     }
+  }
+  h2 {
+    position: absolute;
+    bottom: 20vh;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    width: 100vw;
+    left: 0;
+    right: 0;
+    font-family: $font-headers;
+    @include ipad {
+      bottom: 10vh;
+    }
+    @include lg {
+      bottom: 20vh;
+      font-size: 36px;
+    }
+  }
+  /* overflow: hidden; */
+  @include landscape-mobile {
     h3 {
       font-size: 42px;
     }
@@ -832,6 +883,9 @@ h2 {
     }
     @include flex-wrap (wrap) {
     }
+    @include landscape-mobile {
+      height: 100vh;
+    }
     img {
       width: 200px;
       @include align-self(flex-end) {
@@ -844,12 +898,18 @@ h2 {
       text-transform: uppercase
     }
     h4 {
-      // padding-bottom: 12vh;
       bottom: 0;
       font-size: 28px;
       font-weight: 100;
       letter-spacing: 5px;
     }
+  }
+  @include landscape-mobile {
+    height: calc(100vh + 40px);
+  }
+  @include landscape-ipad {
+    height: calc(50vh + 40px);
+    top: calc(50vh - 30px);
   }
   @include xl {
     height: calc(50vh + 40px);
@@ -914,7 +974,7 @@ h2 {
   }
 }
 
-//HOME PAGE - 2ND HALF OF PAGE --------------
+/*HOME PAGE - 2ND HALF OF PAGE -------------- */
 
 
 .half-page-text {
@@ -939,7 +999,7 @@ h2 {
 }
 
 
-//PORTFOLIO PAGE ------------------------
+/*PORTFOLIO PAGE ------------------------*/
 
 
 .full-page-text {
@@ -999,25 +1059,6 @@ h2 {
   }
 }
 
-// .curved-edge {
-//   position: absolute;
-//   top: 0;
-//   background-color: red;
-//   color: white;
-//   border-top-right-radius: 50% 20%;
-//   margin: 0;
-//   padding: 0;
-//   transform: skewY(6deg);
-//   z-index: 10;
-//   height: 100px;
-//   width: 100%;
-// }
-// .one-of-two-block:nth-of-type(1) {
-// height: 100px;
-// margin-bottom: 0;
-// text-align: center;
-// }
-
 .indent {
   margin-left: 15px;
 }
@@ -1029,8 +1070,6 @@ h2 {
   }
   @include flex-direction(column) {
   }
-  // @include flex-grow(1) {
-  // }
   @include justify-content(space-between) {
   }
   height: auto;
@@ -1038,8 +1077,6 @@ h2 {
   h3 {
     color: $green;
     font-family: 'Varela Round', sans-serif;
-    // font-family: $font-content;
-    // letter-spacing: 5px;
     margin: 10px 0;
     text-align: left;
     @include xl {
@@ -1079,8 +1116,6 @@ h2 {
   }
   @include flex-direction(column) {
   }
-  // @include flex-grow(1) {
-  // }
   @include justify-content(center) {
   }
   max-width: 250px;
@@ -1089,8 +1124,6 @@ h2 {
   h3 {
     color: $green;
     font-family: "Varela round", sans-serif;
-    // font-family: $font-content;
-    // letter-spacing: 5px;
     margin: 10px 0;
     text-align: left;
   }
@@ -1165,7 +1198,7 @@ h2 {
 
 
 
-//PORTFOLIO PAGE - INDEX.HTML -------
+/*PORTFOLIO PAGE - INDEX.HTML -------*/
 
 
 #jreig-div {
@@ -1184,9 +1217,9 @@ h2 {
   }
 }
 
-//PORTFOLIO PAGE PORTFOLIO.HTML --------
+/*PORTFOLIO PAGE PORTFOLIO.HTML --------
 
-//navbar
+//navbar */
 
 .navbar-logo {
   content: url("images/pulp-logo-png.png");
@@ -1228,11 +1261,10 @@ h2 {
 }
 
 .no-header {
-    background-color: transparent;
-    height: 0;
-    margin-top: 0;
-    // margin-bottom: 100px;
-  }
+  background-color: transparent;
+  height: 0;
+  margin-top: 0;
+}
 
 .main-wrapper {
   background-color: white;
@@ -1240,13 +1272,9 @@ h2 {
   width: 100vw;
   position: relative;
   z-index: 3000;
-
 }
 
-  //------------------------
-
-.portfolio-wrapper {
-}
+  /*------------------------*/
 
 .portfolio-title {
   text-align: center;
@@ -1327,32 +1355,27 @@ h2 {
   margin-right: auto;
 }
 
-// .dark-background-div {
-//   background-color: rgba(40, 45, 45, .9);
-//   color: white;
-// }
-
-//JREIG portfolio images ------------------------------
+/*JREIG portfolio images ------------------------------*/
 
 .image-div {
   width: 85vw;
   height: auto;
   margin: 0 auto;
   margin-bottom: 60px;
-    @include ipad {
-      width: 60vw;
-    }
-    @include xl {
-      width: 50%;
-    }
+  @include ipad {
+    width: 60vw;
+  }
+  @include xl {
+    width: 50%;
+  }
 }
 
 img.porfolio-images {
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-    box-shadow: 0px 5px 30px;
-    }
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0px 5px 30px;
+}
 
 .results-img {
   content:url("images/comp-results.jpg");
@@ -1396,7 +1419,7 @@ img.porfolio-images {
   }
 }
 
-//PORTFOLIO IMAGES THE BODY MECHANIC --------
+/*PORTFOLIO IMAGES THE BODY MECHANIC --------*/
 
 .foreground-tbm-picture {
   content:url("images/tbm-home-mobile.jpg");
@@ -1427,7 +1450,7 @@ img.porfolio-images {
 }
 
 
-//PORTFOLIO IMAGES RYAN MAYER MOTIVATION -------------
+/*PORTFOLIO IMAGES RYAN MAYER MOTIVATION -------------*/
 
 .foreground-rmm-picture {
   content:url("images/rmm-banner.png");
@@ -1442,18 +1465,6 @@ img.porfolio-images {
   border-radius: 1px;
 }
 
-// .rmm-services {
-//   content:url("images/ryan_mayer_motivation/rmm-services.jpg");
-//   @include portfolio-image() {
-//   }
-// }
-
-// .rmm-testimonials {
-//   content:url("images/ryan_mayer_motivation/rmm-testimonials.jpg");
-//   @include portfolio-image() {
-//   }
-// }
-
 .rmm-media {
   content:url("images/ryan_mayer_motivation/rmm-media.jpg");
   @include portfolio-image() {
@@ -1466,7 +1477,7 @@ img.porfolio-images {
   }
 }
 
-//-------------------------------------
+/*-------------------------------------*/
 .spacer {
   height: 30px;
 }
@@ -1495,7 +1506,6 @@ img.porfolio-images {
   color: $green;
   font-weight: 400;
   text-align: left;
-  // margin-bottom: -15px;
   }
   @include md {
     width: 60%;
@@ -1515,8 +1525,8 @@ img.porfolio-images {
   }
   h4 {
     text-align: left;
-   font-weight: 500;
-   margin-top: 15px;
+    font-weight: 500;
+    margin-top: 15px;
   }
   @include md {
     width: 60%;
@@ -1559,12 +1569,7 @@ img.porfolio-images {
 }
 
 
-//ABOUT PAGE -----------------------------
-
-// .profile-picture {
-//   width: 150px;
-//   height: 150px;
-// }
+/*ABOUT PAGE -----------------------------*/
 
 .profile {
   content:url("images/profile-about-page.jpg");
@@ -1608,7 +1613,7 @@ img.porfolio-images {
     padding-bottom: 60px;
     color: rgba(255, 255, 255, .9);
   }
-  @include landscape {
+  @include landscape-mobile {
     background-size: 50vw;
     background-position: left;
   }
@@ -1639,10 +1644,7 @@ img.porfolio-images {
     width: 50vw;
     height: 50vw;
     border-radius: 50%;
-     object-fit: cover;
-  }
-  @include landscape {
-
+    object-fit: cover;
   }
   @include xl {
     width: 40vw;
@@ -1688,13 +1690,13 @@ img.porfolio-images {
 .mobile-brin {
   display: unset;
   content: url(images/brin.png);
-    width: 150px;
-    height: auto;
-    padding: 30px;
-    object-fit: contain;
-    margin: auto;
-    @include flexbox() {
-    }
+  width: 150px;
+  height: auto;
+  padding: 30px;
+  object-fit: contain;
+  margin: auto;
+  @include flexbox() {
+  }
   @include ipad {
     display: none;
   }
@@ -1715,13 +1717,13 @@ img.porfolio-images {
 .mobile-windmill {
   display: unset;
   content: url(images/windmill.png);
-    width: 100px;
-    height: auto;
-    padding: 30px;
-    object-fit: contain;
-    margin: auto;
-    @include flexbox() {
-    }
+  width: 100px;
+  height: auto;
+  padding: 30px;
+  object-fit: contain;
+  margin: auto;
+  @include flexbox() {
+  }
   @include ipad {
     display: none;
   }
@@ -1791,7 +1793,7 @@ img.porfolio-images {
   background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(17,17,17,0.1) 13%, rgba(0,0,0,0.8) 100%);
   background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17,17,17,0.1) 13%, rgba(0,0,0,0.8) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
-  @include landscape {
+  @include landscape-mobile {
     right: 0;
     width: 50vw;
     background: none;
@@ -1841,16 +1843,16 @@ img.porfolio-images {
   color: $font-light-color;
   line-height: 15px;
   font-weight: 100;
- @include landscape {
+  @include landscape-mobile {
     color: $font-dark-color;
     h3 {
       font-family: 'Varela round', sans-serif;
     }
     a {
-    color: $font-dark-color;
+      color: $font-dark-color;
     }
   }
-  @include landscape {
+  @include landscape-mobile {
     padding: 0;
     width: 80%;
   }
@@ -1883,18 +1885,12 @@ img.porfolio-images {
     @include green-ghost-button() {
     }
   }
-  @include landscape {
+  @include landscape-mobile {
     padding: 0;
     button {
       margin: 15px 0 30px 0;
     }
   }
- //  &:hover {
- //     color: white;
- //     background-color: $green;
- //   }
- //   @content
- // }
  @include lg {
     padding: 0;
     button {
@@ -1921,11 +1917,6 @@ li {
     width: 30px;
   }
 }
-
-// .self-flex-end {
-//   @include align-self(baseline) {
-//   }
-// }
 
 .test {
   background-color: $green;
@@ -1959,8 +1950,7 @@ footer {
   @include ipad {
     bottom: -140px;
   }
-
- div {
+  div {
     width: 100vw;
     h1 {
       font-family: $font-headers;
@@ -1975,21 +1965,19 @@ footer {
       cursor: pointer;
     }
   }
-
   ul {
     width: 100vw;
     @include flexbox() {
+    }
+    @include flex-wrap(nowrap) {
+    }
+    @include justify-content(center) {
+    }
+    li {
+      padding: 5px;
+      text-align: left;
+    }
   }
-  @include flex-wrap(nowrap) {
-  }
-  @include justify-content(center) {
-  }
-
-  li {
-    padding: 5px;
-    text-align: left;
-  }
-}
 }
 
 li a {
@@ -2001,20 +1989,19 @@ li a {
     padding: 15px;
     margin: 30px;
   }
-
 }
 
 .footer-button {
-    border-radius: 5px;
-    color: #23C06E;
-    background-color: transparent;
-    border: 2px solid #23C06E;
-    width: 125px;
-    font-family: "Roboto", sans-serif;
-    font-size: 14px;
-    text-transform: uppercase;
-    padding: 10px 15px;
-    letter-spacing: 1px;
+  border-radius: 5px;
+  color: #23C06E;
+  background-color: transparent;
+  border: 2px solid #23C06E;
+  width: 125px;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  letter-spacing: 1px;
   a {
     color: white;
   }
