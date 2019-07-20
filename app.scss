@@ -515,7 +515,9 @@ header {
   @include lg {
     height: 50vh;
   }
-
+  @include landscape-ipad {
+    height: 100vh;
+  }
   @include xl {
     height: 100vh;
   }
