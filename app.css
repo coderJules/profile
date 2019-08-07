@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,700|Varela+Round");
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,400i,700&display=swap|Varela+Round");
 html, body {
   margin: 0;
   padding: 0; }
@@ -80,8 +80,11 @@ h4 {
   letter-spacing: 0; }
 
 h6 {
-  font-size: 15px;
-  font-family: "Roboto", sans-serif; }
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: italic; }
 
 p {
   font-size: 16px;
@@ -1115,6 +1118,11 @@ header {
   @media only screen and (min-width: 1026px) {
     .business-div {
       width: 50%; } }
+
+.quote h6 {
+  padding: 0 20%; }
+.quote p {
+  text-align: right; }
 
 .computer-image {
   width: 100vw;
