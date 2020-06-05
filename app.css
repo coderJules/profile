@@ -389,7 +389,7 @@ header {
 
 .page-header {
   width: 100%;
-  top: 70px;
+  top: 90px;
   padding-top: 90px;
   padding-bottom: 20px;
   text-align: center; }
@@ -417,14 +417,14 @@ header {
   @media only screen and (min-width: 768px) and (min-height: 450px) {
     .page-header {
       width: 100%;
-      padding-top: 240px;
+      padding-top: 30px;
       text-align: center; }
       .page-header h1 {
         font-size: 40px;
         line-height: 60px;
         color: slategray;
         font-size: 40px;
-        padding: 0 90px 90px 90px;
+        padding: 0 0 30px 0;
         line-height: 81px;
         font-family: "Varela Round", sans-serif;
         background: linear-gradient(to right, #fa4559 0%, #fa4559 100%);
@@ -1673,7 +1673,7 @@ img.porfolio-images {
   width: 66%;
   margin: 0 auto;
   color: white;
-  line-height: 15px;
+  line-height: 22px;
   font-weight: 100; }
   @media only screen and (max-height: 450px) and (orientation: landscape) {
     .about-info-p {
@@ -1701,7 +1701,7 @@ img.porfolio-images {
         font-size: 16px;
         font-weight: 300;
         letter-spacing: 1px;
-        line-height: 26px;
+        line-height: 24px;
         font-family: "Roboto", sans-serif; } }
 
 .self-align-right-flex-end {
