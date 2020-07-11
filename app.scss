@@ -1259,6 +1259,18 @@ header {
   background-color: transparent;
   @include ipad {
     height: 90px;
+    }
+    @include lg {
+      background-color: $green;
+    a {
+      color: $font-dark-color;
+    }
+    a:hover {
+      color: white;
+    }
+    .dropdown-content {
+      background-color: white;
+    }
   }
 }
 
@@ -1281,6 +1293,28 @@ header {
   }
 }
 
+.not-home-about-large {
+  display: none;
+  // background-color: #FDC54B;
+  background-color: $green;
+  @include lg {
+    display: block;
+    height: 90px;
+  }
+  a {
+    color: $font-dark-color;
+  }
+  a:hover {
+    color: white;
+  }
+
+
+  .dropdown-content {
+    background-color: white;
+  }
+}
+
+
 .no-header {
   background-color: transparent;
   height: 0;
@@ -1295,12 +1329,21 @@ header {
   z-index: 3000;
 }
 
+.grow {
+  transform: scale(1.1);
+  background: red;
+  }
+
+
+
+
+
   /*------------------------*/
 
 .portfolio-title {
   text-align: center;
   color: $font-dark-color;
-  padding: 115px 15px 15px 15px;
+  padding: 125px 15px 35px 15px;
   h2 {
     font-family: "Varela Round", sans-serif;
   }
@@ -1341,11 +1384,27 @@ header {
   }
 }
 
-.computer-image {
-  width: 100vw;
+.computer-image-jreig {
+  content:url("images/jreig homepage.png");
+  width: 40vw;
   margin: 0 auto;
   position: relative;
-  height: 250px;
+  margin-bottom: 30px;
+}
+
+.computer-image-ps {
+  content:url("images/peggy_shannon/peggy shannon homepage.png");
+  width: 40vw;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.computer-image-body-mechanic {
+  content:url("images/the_body_mechanic/body_mechanic_homepage.png");
+  width: 40vw;
+  margin: 0 auto;
+  position: relative;
   margin-bottom: 30px;
 }
 
@@ -1495,8 +1554,21 @@ img.porfolio-images {
   border-radius: 1px;
 }
 
+.foreground-ps-picture {
+  content:url("images/peggy shannon background.png");
+  position: absolute;
+  top: 19px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 240px;
+  border-radius: 1px;
+  border-radius: 1px;
+}
+
 .rmm-media {
-  content:url("images/ryan_mayer_motivation/rmm-media.jpg");
+  content:url("images/peggy_shannon/shop books.png");
   @include portfolio-image() {
   }
 }
@@ -1606,6 +1678,9 @@ img.porfolio-images {
   width: 100vw;
   margin: 0 auto;
   height: auto;
+  @include xl {
+   display: none;
+ }
 }
 
 .about-page {

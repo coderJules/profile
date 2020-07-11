@@ -1064,6 +1064,15 @@ header {
   @media only screen and (min-width: 768px) and (min-height: 450px) {
     .not-home-about {
       height: 90px; } }
+  @media only screen and (min-width: 961px) {
+    .not-home-about {
+      background-color: #23C06E; }
+      .not-home-about a {
+        color: slategray; }
+      .not-home-about a:hover {
+        color: white; }
+      .not-home-about .dropdown-content {
+        background-color: white; } }
 
 .not-home {
   background-color: #23C06E; }
@@ -1075,6 +1084,20 @@ header {
   .not-home a:hover {
     color: white; }
   .not-home .dropdown-content {
+    background-color: white; }
+
+.not-home-about-large {
+  display: none;
+  background-color: #23C06E; }
+  @media only screen and (min-width: 961px) {
+    .not-home-about-large {
+      display: block;
+      height: 90px; } }
+  .not-home-about-large a {
+    color: slategray; }
+  .not-home-about-large a:hover {
+    color: white; }
+  .not-home-about-large .dropdown-content {
     background-color: white; }
 
 .no-header {
@@ -1089,11 +1112,15 @@ header {
   position: relative;
   z-index: 3000; }
 
+.grow {
+  transform: scale(1.1);
+  background: red; }
+
 /*------------------------*/
 .portfolio-title {
   text-align: center;
   color: slategray;
-  padding: 115px 15px 15px 15px; }
+  padding: 125px 15px 35px 15px; }
   .portfolio-title h2 {
     font-family: "Varela Round", sans-serif; }
   .portfolio-title h6 {
@@ -1124,11 +1151,25 @@ header {
 .quote p {
   text-align: right; }
 
-.computer-image {
-  width: 100vw;
+.computer-image-jreig {
+  content: url("images/jreig homepage.png");
+  width: 40vw;
   margin: 0 auto;
   position: relative;
-  height: 250px;
+  margin-bottom: 30px; }
+
+.computer-image-ps {
+  content: url("images/peggy_shannon/peggy shannon homepage.png");
+  width: 40vw;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 30px; }
+
+.computer-image-body-mechanic {
+  content: url("images/the_body_mechanic/body_mechanic_homepage.png");
+  width: 40vw;
+  margin: 0 auto;
+  position: relative;
   margin-bottom: 30px; }
 
 .foreground-picture {
@@ -1283,8 +1324,20 @@ img.porfolio-images {
   border-radius: 1px;
   border-radius: 1px; }
 
+.foreground-ps-picture {
+  content: url("images/peggy shannon background.png");
+  position: absolute;
+  top: 19px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 240px;
+  border-radius: 1px;
+  border-radius: 1px; }
+
 .rmm-media {
-  content: url("images/ryan_mayer_motivation/rmm-media.jpg");
+  content: url("images/peggy_shannon/shop books.png");
   width: 100vw;
   margin: 0 auto;
   box-sizing: border-box;
@@ -1387,6 +1440,9 @@ img.porfolio-images {
   width: 100vw;
   margin: 0 auto;
   height: auto; }
+  @media only screen and (min-width: 1026px) {
+    .profile {
+      display: none; } }
 
 .about-page p, .about-page h3 {
   margin: 15px 30px 0 30px;
