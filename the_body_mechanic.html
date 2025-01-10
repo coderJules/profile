@@ -5,11 +5,8 @@
     <meta charset="UTF-8">
     <title>Project: The Body Mechanic</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="components.js" defer></script>
     <link rel="stylesheet" type="text/css" href="app.css">
-    <script src="https://use.fontawesome.com/releases/v5.0.6/js/brands.js"></script>
-    <script src="https://use.fontawesome.com/releases/v5.0.6/js/solid.js"></script>
-    <script src="https://use.fontawesome.com/releases/v5.0.6/js/regular.js"></script>
-    <script src="https://use.fontawesome.com/releases/v5.0.6/js/fontawesome.js"></script>
     <link rel="shortcut icon" type="image/png" href="/images/favicon-16X16.png"/>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144257780-1"></script>
@@ -22,6 +19,12 @@
     </script>
   </head>
     <body>
+      <div class="horizontal-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="index.html#work" class="nav-link active">Projects</a>
+        <a href="index.html#jules" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
    <header class="no-header">
       <nav class="not-home">
         <div class="mobile-dropdown-nav">
@@ -29,8 +32,8 @@
          <div class="dropdown">
             <div class="dropbtn" onclick="myFunction()"></div>
               <div id="myDropdownHome" class="dropdown-content">
-                <a href="index.html#work">Projects</a>
-                <a href="about.html">About</a>
+                <a href="index.html#work" class="active">Projects</a>
+                <a href="index.html#jules.html">About</a>
                 <a href="contact.html">Contact</a>
               </div>
             </div>
@@ -69,39 +72,37 @@
 </div>
 </div>
   <div class="image-div">
-     <img src="images/the_body_mechanic/tbm-scheduler.jpg" class="porfolio-images" alt="photo of client's webpage">
+     <img src="images/the_body_mechanic/tbm-scheduler.jpg" class="portfolio-images" alt="photo of client's webpage">
   </div>
 
  <div class="portfolio-text">
     <h4>Online forms</h4>
   </div>
   <div class="image-div">
-     <img src="images/the_body_mechanic/tbm-intake.jpg" class="porfolio-images" alt="photo of client's webpage">
+     <img src="images/the_body_mechanic/tbm-intake.jpg" class="portfolio-images" alt="photo of client's webpage">
   </div>
 
-
-<div class="portfolio-text">
-  <div class="two-column-div">
-    <p><a href="http://thebodymechanic.net" target="_blank">Visit the site *</a></p>
-    <p><a href="jreig.html">Next Project: JRIEG - Johnson Real Estate Investment Group, Inc.</a> <i class="fas fa-arrow-circle-right"></i></p>
-  </div>
-  <p>    *some content may have changed (Squarespace features a robust content management system and clients are able to make edits after site completion).</p>
-</div>
-      <footer>
-        <div>
-          <h1>Let's build something awesome together  : )</h1>
-        </div>
-        <div>
-          <h3>513-399-7542</h3>
-        </div>
-        <div>
-          <ul>
-            <li><a href="index.html#work">Projects</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        <div>
-      </footer>
-    <script src="components.js"></script>
+    <div class="portfolio-text">
+      <div class="two-column-div">
+        <p><a href="http://thebodymechanic.net" target="_blank">Visit the site *</a></p>
+        <p><a href="contact.html">Get started on your next project</a>  <img src="images/svg/Asset 2.svg" class="graphic-symbol" alt="arrow-symbol"></p>
+      </div>
+      <p>    *some content may have changed (Squarespace features a robust content management system and clients are able to make edits after site completion).</p>
+    </div>
+    <footer>
+      <div>
+        <h1>Let's build something awesome together  : )</h1>
+      </div>
+      <div>
+        <h3>513-399-7542</h3>
+      </div>
+      <div>
+        <ul>
+          <li><a href="index.html#work">Projects</a></li>
+          <li><a href="index.html#jules">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      <div>
+    </footer>
   </body>
 </html>

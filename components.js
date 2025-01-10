@@ -1,16 +1,21 @@
 // TOGGLE DIV FOR PORTFOLIO SECTION
 
-//THE BODY MECHANIC -----------------
 
-
-function toggle_div() {
-    var x = document.getElementById("div-name-here");
-    if (x.style.display === "none") {
-        x.style.display = "block";
-    } else {
-        x.style.display = "none";
+const observer = new MutationObserver(() => {
+    const brandingElement = document.querySelector('.cog-branding.cog-branding--minimal');
+    if (brandingElement) {
+      // Stop observing once the branding element (end of form) is loaded
+      observer.disconnect();
+      // Hide the loading spinner
+      document.getElementById('loadingOverlay').style.display = 'none';
     }
-}
+  });
+
+  // Start observing the DOM for changes
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true
+  });
 
 //DROPDOWN MENUS----------------
 
@@ -37,18 +42,4 @@ window.onclick = function(event) {
     }
   }
 }
-
-//DIV REVEAL ON HOVER --------------
-
-$('div.beginning').hide();
-$('div.dig-design').hide();
-$('div.web-dev').hide();
-$('div.now').hide();
-
-
-$('ul li').hover(function() {
-    var cls = $(this).attr('class');
-    $('div.'+cls).fadeToggle("fast");
-})
-
 

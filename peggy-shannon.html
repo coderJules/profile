@@ -5,11 +5,8 @@
     <meta charset="UTF-8">
     <title>Project: Peggy Shannon</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="components.js" defer></script>
     <link rel="stylesheet" type="text/css" href="app.css">
-    <script src="https://use.fontawesome.com/releases/v5.0.6/js/brands.js"></script>
-    <script src="https://use.fontawesome.com/releases/v5.0.6/js/solid.js"></script>
-    <script src="https://use.fontawesome.com/releases/v5.0.6/js/regular.js"></script>
-    <script src="https://use.fontawesome.com/releases/v5.0.6/js/fontawesome.js"></script>
     <link rel="shortcut icon" type="image/png" href="/images/favicon-16X16.png"/>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144257780-1"></script>
@@ -24,22 +21,28 @@
 
   </head>
   <body>
-    <header class="no-header">
-      <nav class="not-home">
-        <div class="mobile-dropdown-nav">
-          <a href="index.html"><div class="navbar-logo" title="Pulp Web Design Logo"></div></a>
-         <div class="dropdown">
-            <div class="dropbtn" onclick="myFunction()"></div>
-              <div id="myDropdownHome" class="dropdown-content">
-                <a href="index.html#work">Projects</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-              </div>
-            </div>
+    <div class="mobile-dropdown-nav">
+      <a href="index.html"><div class="navbar-logo" title="Pulp Web Design Logo">
+      </div></a>
+      <div class="dropdown">
+        <div class="dropbtn" onclick="myFunction()"></div>
+          <div id="myDropdownHome" class="dropdown-content">
+            <a href="index.html#work" class="active">Projects</a>
+            <a href="index.html#jules">About</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          </div>
+          <div class="horizontal-menu">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="index.html#work" class="nav-link active">Projects</a>
+            <a href="index.html#jules" class="nav-link">About</a>
+            <a href="contact.html" class="nav-link">Contact</a>
           </div>
         </div>
-      </nav>
-    </header>
+         <!-- <div class="video-div">
+           <iframe src="https://player.vimeo.com/video/320916675?background=1&muted=1&quality=720p" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+         </div> -->
+  <header class="no-header"></header>
 
   <div class=portfolio-title onscroll="elementInViewport()">
     <!-- <img src="images/tbm-logo.png"> -->
@@ -69,86 +72,58 @@
 <div class="snap-container">
 
   <div id="growing-div" class="image-div growing-div">
-    <img src="images/peggy_shannon/shop books.png" class="porfolio-images" alt="photo of client's webpage">
+    <img src="images/peggy_shannon/shop books.png" class="portfolio-images" alt="photo of client's webpage">
   </div>
 
   <div class="image-div growing-div">
-    <img src="images/churches-photography-page.png" class="porfolio-images" alt="photo of client's webpage">
+    <img src="images/churches-photography-page.png" class="portfolio-images" alt="photo of client's webpage">
   </div>
 
   <div class="image-div growing-div">
-    <img src="images/peggy_shannon/newsletter.png" class="porfolio-images" alt="photo of client's webpage">
+    <img src="images/peggy_shannon/newsletter.png" class="portfolio-images" alt="photo of client's webpage">
   </div>
 
   <div class="image-div growing-div">
-    <img src="images/peggy_shannon/causes-shannon-supports.png" class="porfolio-images" alt="photo of client's webpage">
+    <img src="images/peggy_shannon/causes-shannon-supports.png" class="portfolio-images" alt="photo of client's webpage">
   </div>
 
   <div class="image-div growing-div">
-    <img src="images/peggy_shannon/peggy-shannon-blog.png" class="porfolio-images" alt="photo of client's webpage">
+    <img src="images/peggy_shannon/peggy-shannon-blog.png" class="portfolio-images" alt="photo of client's webpage">
   </div>
 
   <div class="image-div growing-div">
-    <img src="images/peggy_shannon/shop all.png" class="porfolio-images" alt="photo of client's webpage">
+    <img src="images/peggy_shannon/shop all.png" class="portfolio-images" alt="photo of client's webpage">
   </div>
 
   <div class="image-div growing-div">
-    <img src="images/peggy_shannon/peggy-shannon-about.png" class="porfolio-images" alt="photo of client's webpage">
+    <img src="images/peggy_shannon/peggy-shannon-about.png" class="portfolio-images" alt="photo of client's webpage">
   </div>
 </div>
 
 <div class="portfolio-text">
   <div class="two-column-div">
     <p><a href="http://peggyshannonstories.com/" target="_blank">Visit the site *</a></p>
-    <p><a href="the_body_mechanic.html">Next Project: The Body Mechanic.<i class="fas fa-arrow-circle-right"></i></a></p>
+    <p><a href="the_body_mechanic.html">Next Project: The Body Mechanic.</a> <img src="images/svg/Asset 2.svg" class="graphic-symbol" alt="arrow-symbol"></p>
   </div>
   <p>    *some content may have changed (Squarespace features a robust content management system and clients are able to make edits after site completion).</p>
 </div>
-      <footer>
-        <div>
-          <h1>Let's build something awesome together  : )</h1>
-        </div>
-        <div>
-          <h3>513-399-7542</h3>
-        </div>
-        <div>
-          <ul>
-            <li><a href="index.html#work">Projects</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        <div>
-      </footer>
-          <script>
-          // var myElement = document.getElementsByClassName('growing-div');
-          // var bounding = myElement.getBoundingClientRect();
-
-          // function elementInViewport() {
-
-          //     var bounding = myElement.getBoundingClientRect();
-
-          //     if (bounding.top >= 0 && bounding.left >= 0 && bounding.right <= (window.innerWidth || document.documentElement.clientWidth) && bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
-
-
-          //         myElement.classList.add("grow");
-          //     } else {
-          //         var isBig = document.getElementsByClassName('growing-div');
-          //         if (isBig > 0) {
-          //         myElement.classList.remove("grow");
-          //         console.log('Element is NOT in the viewport!');
-          //     }
-      //   }
-      // }
-        window.onscroll = function() {myFunction()};
-
-          function myFunction() {
-        if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
-          document.getElementsById("growing-div").className = "grow";
-        }
-
-        </script>
-<script src="components.js"></script>
-</body>
+    <footer>
+     <div>
+       <h1>Technology that works for you.</h1>
+         </div>
+         <div>
+           <h3>513-399-7542</h3>
+           <p>julie@pulpwebdesign.com</p>
+         </div>
+         <div>
+         <ul>
+           <li><a href="index.html#work">Projects</a></li>
+           <li><a href="index.html#jules.html">About</a></li>
+           <li><a href="contact.html">Contact</a></li>
+         </ul>
+       </div>
+    </footer>
+  </body>
 </html>
 
 

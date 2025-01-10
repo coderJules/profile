@@ -61,16 +61,17 @@ strong {
 /*end meyer css */
 
 
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,700|Varela+Round&display=swap');
+ @import url("https://use.typekit.net/hgn0opm.css");
 /*VARIABLES*/
 
+
 $font-light-color: white;
-$font-medium-color: #A9B4C0;
+$font-medium-color: #4D5866;
 $font-dark-color: slategray;
 
-$font-headers: 'Roboto', sans-serif;
-$font-content: 'Roboto', sans-serif;
-$font-buttons: 'Roboto', sans-serif;
+$font-headers: 'Merel', sans-serif;
+$font-content: 'Merel', sans-serif;
+$font-buttons: 'Merel', sans-serif;
 $button-font-weight: 100;
 $button-letter-spacing: 1px;
 
@@ -78,12 +79,14 @@ $button-font-size: 14px;
 
 $light-page-background-color: white;
 $green: #23C06E;
-$gray: rgba(43, 45, 66, .9);
-/* #352D39; #544E61 */
+$gray: #3B434E;
+$dark-green: #216869;
+
+/*#352D39; #544E61*/
 
 h1 {
   font-size: 24px;
-  font-family: $font-content;
+  font-family: $font-headers;
   font-weight: 400;
 }
 
@@ -112,7 +115,7 @@ h6 {
   line-height: 24px;
   font-family: $font-content;
   font-weight: 300;
-  font-style: italic;
+  color: $font-medium-color;
 }
 
 p {
@@ -132,6 +135,25 @@ hr {
 
 /*MIXINS -----------------------------------
 BUTTON MIXINS ---------------------------- */
+
+@mixin dark-green-ghost-button {
+ border-radius: 5px;
+ color: $dark-green;
+ background-color: transparent;
+ border: 2px solid $dark-green;
+ width: 125px;
+ font-family: $font-buttons;
+ font-size: $button-font-size;
+ text-transform: uppercase;
+ padding: 10px 15px;
+ letter-spacing: $button-letter-spacing;
+  &:hover {
+    color: white;
+    background-color: $dark-green;
+    cursor: pointer;
+  }
+ @content;
+}
 
 @mixin green-ghost-button {
  border-radius: 5px;
@@ -153,9 +175,10 @@ BUTTON MIXINS ---------------------------- */
 }
 
 @mixin green-button {
+  border: 3px solid white;
   border-radius: 5px;
   color: white;
-  background-color: $green;
+  background-color: $dark-green;
   width: 125px;
   font-family: $font-buttons;
   font-size: $button-font-size;
@@ -164,7 +187,7 @@ BUTTON MIXINS ---------------------------- */
   letter-spacing: $button-letter-spacing;
   &:hover {
     opacity: .9;
-    background-color: orange;
+    background-color: $green;
     box-shadow: 1px 1px 1px rgba(1, 1, 1, .3);
     cursor: pointer;
   }
@@ -398,11 +421,12 @@ BUTTON MIXINS ---------------------------- */
 
 
 .mobile-dropdown-nav {
-  position: relative;
+  z-index: 4000;
+  background: linear-gradient(45deg, #47a278, #51AA8A);
+  position: fixed;
   width: 100%;
-  z-index: 300;
-  background: transparent;
   height: 70px;
+  margin-top: 70px;
   @include flexbox() {
   }
   @include justify-content(space-between) {
@@ -413,13 +437,15 @@ BUTTON MIXINS ---------------------------- */
   }
   @include ipad {
     height: 90px;
+    margin-top: 90px;
   }
 }
 
 .mobile-dropdown-nav-home {
-  position: relative;
+  z-index: 4000;
+  position: fixed;
+  background: linear-gradient(45deg, #47a278, #51AA8A);
   width: 100%;
-  background: transparent;
   height: 70px;
   @include flexbox() {
   }
@@ -446,6 +472,10 @@ BUTTON MIXINS ---------------------------- */
   @include ipad {
     padding: 32.5px 30px 32.5px 30px;
   }
+  @include lg {
+    display: none;
+  }
+
 }
 
 
@@ -464,7 +494,7 @@ BUTTON MIXINS ---------------------------- */
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: rgba(255, 255, 255, .1);
+  background-color: #56b489;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -484,16 +514,16 @@ BUTTON MIXINS ---------------------------- */
 /* Change color of dropdown links on hover */
 .dropdown-content {
   a:hover {
-    background-color: $green;
+    background-color: $dark-green;
   }
 }
 
-.active {
-  background-color: rgba(1, 1, 1, .1);
-  cursor: not-allowed;
-  opacity: 0.5;
-  text-decoration: none;
-}
+// .active {
+//   background-color: rgba(1, 1, 1, .1);
+//   cursor: not-allowed;
+//   opacity: 0.5;
+//   text-decoration: none;
+// }
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 
 .show {
@@ -504,44 +534,164 @@ BUTTON MIXINS ---------------------------- */
 /*HOME PAGE - HEADER -------------------------------- */
 
 header {
+ background: linear-gradient(45deg, #419F6D, #51AA8A);
+  // background: linear-gradient(45deg, #6DD986, #51AA8A);
   position: relative;
   z-index: 0;
+  height: calc(50vh + 70px);
   margin-top: -70px;
-  height: calc(100 + 40px);
+  // margin-top: -70px;
+
    @include landscape-mobile {
     height: 100vh;
   }
   @include ipad {
-    height: 50vh;
+    height: calc(50vh + 90px);
+    margin-top: -90px;
+    position: relative;
   }
-  @include lg {
-    height: 50vh;
-  }
-  @include landscape-ipad {
-    height: 100vh;
-  }
-  @include xl {
-    height: 100vh;
-  }
+}
+
+.horizontal-menu {
+    display: none;
+    @include lg {
+      display: unset;
+      @include flexbox() {
+      }
+      @include justify-content(flex-end) {
+      }
+      text-align: right;
+      font-family: $font-headers;
+      position: fixed;
+      top: 0;
+      right: 0;
+      font-size: 16px;
+      width: auto;
+      z-index: 400;
+
+      // justify-content: space-around;
+      background-color: transparent;
+      line-height: 90px;
+    }
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 0rem 2rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect */
+.nav-link:hover {
+    background-color: #fa4a3e;
+    color: $dark-green;
+}
+
+/* Active state */
+.nav-link.active {
+  z-index: 400;
+  color: white;
+  font-weight: 700;
 }
 
 .form-page {
   z-index: -1;
   position: relative;
-  padding: 90px 30px 120px 30px;
-  height: auto;
+  width: 100vw;
+  padding: 90px 0 120px 0;
+  min-height: 100vh;
   @include flexbox() {
   }
   @include flex-wrap(wrap) {
   }
   @include flex-direction(column) {
   }
-  @include justify-content(center) {
+  @include justify-content(flex-start) {
+  }
+  @include ipad {
+     // min-height: ;
+     padding: 90px 0 120px 0;
+     margin-top: 90px;
   }
   @include lg {
     @include flex-direction(row) {
     }
+    // min-height: 100vh;
+    margin-top: 90px;
   }
+}
+
+// code for loading spinner //
+// .iframe-container {
+//       position: absolute;
+//       width: 100%;
+//       max-width: 600px; /* Adjust as needed */
+//       margin: auto;
+//       top: 160px;
+//     }
+
+    .loading-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+    }
+
+    .loading-spinner {
+      border: 4px solid rgba(0, 0, 0, 0.2);
+      border-top: 4px solid #216869;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+
+.iframe-container {
+  position: absolute;
+  top: 160px;
+  width: 100vw;
+  @include flexbox() {
+  }
+  @include justify-content(center) {
+  }
+  z-index: 3000;
+  display: flex;
+}
+
+.square-block-bottom {
+  height: 75px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  @include ipad {
+  height: 85px;
+}
+}
+
+.square-block-top {
+  height: 70px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: white;
 }
 
 .form-page-form {
@@ -555,6 +705,47 @@ header {
   }
 }
 
+.intro-wrapper {
+  @include flexbox() {
+  }
+  @include justify-content(center) {
+  }
+  background-color: #216869;
+}
+
+.intro {
+  padding: 75px 30px;
+  font-size: 18px;
+  max-width: 750px;
+  font-family: $font-content;
+  color: white;
+  h2 {
+    line-height: 1.5;
+    font-size: 22px;
+    padding: 0 0 10px 0;
+  }
+  h5 {
+    line-height: 1.5;
+    font-size: 18px;
+    padding: 15px 0;
+  }
+  @include ipad {
+    padding: 75px;
+    h2 {
+    line-height: 1.5;
+    font-size: 28px;
+    padding: 0 0 10px 0;
+    }
+    h5 {
+    line-height: 1.5;
+    font-size: 18px;
+    padding: 15px 0;
+    }
+  }
+  @include lg {
+    padding: 90px;
+  }
+}
 
 .map {
   padding-bottom: 30px;
@@ -640,75 +831,85 @@ header {
 
 .page-header {
   width: 100%;
-  top: 90px;
-  padding-top: 90px;
-  padding-bottom: 20px;
-  text-align: center;
-  h1 {
+  padding-bottom: 10px;
+  background-color: white;
+  margin: 0 auto;
+  h2 {
     color: $font-dark-color;
-    font-size: 32px;
-    padding: 20px 0 90px 0;
-    line-height: 33px;
-    font-family: "Varela Round", sans-serif;
-    background: linear-gradient(to right, #fa4559 0%, #fa4559 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  h4 {
-      font-family: $font-content;
-      font-size: 24px;
-      color: $font-dark-color;
-      font-weight: 300;
-      text-decoration: none;
-    }
-    h3 {
-      font-weight: 300;
-      font-size: 32px;
-      padding: 30px 0;
-      color: $font-dark-color;
-      text-decoration: none;
-    }
-  @include ipad {
-    width: 100%;
-    padding-top: 30px;
     text-align: center;
-    h1 {
-      font-size: 40px;
-      line-height: 60px;
-      color: $font-dark-color;
-      font-size: 40px;
-      padding: 0 0 30px 0;
-      line-height: 81px;
-      font-family: "Varela Round", sans-serif;
-      background: linear-gradient(to right, #fa4559 0%, #fa4559 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    h4 {
-      font-family: $font-content;
-      font-size: 24px;
-      color: $font-dark-color;
-      font-weight: 300;
-    }
-    p {
-      font-family: $font-content;
-      font-size: 16px;
-      color: $font-dark-color;
-      padding-bottom: 30px;
-    }
-  }
-  @include lg {
-    h1 {
-      font-size: 56px;
-    }
-    h4 {
-      font-size: 36px;
-    }
-    h3 {
-      font-size: 40px;
-    }
   }
 }
+
+// .page-header {
+//   width: 100%;
+//   top: 90px;
+//   padding-top: 90px;
+//   padding-bottom: 20px;
+//   text-align: center;
+//   h1 {
+//     color: $font-dark-color;
+//     font-size: 32px;
+//     padding: 20px 0 90px 0;
+//     line-height: 33px;
+//     font-family: $font-headers;
+//     -webkit-background-clip: text;
+//     -webkit-text-fill-color: transparent;
+//   }
+//   h4 {
+//       font-family: $font-content;
+//       font-size: 24px;
+//       color: $font-dark-color;
+//       font-weight: 300;
+//       text-decoration: none;
+//     }
+//     h3 {
+//       font-weight: 300;
+//       font-size: 32px;
+//       padding: 30px 0;
+//       color: $font-dark-color;
+//       text-decoration: none;
+//     }
+//   @include ipad {
+//     width: 100%;
+//     padding-top: 30px;
+//     text-align: center;
+//     h1 {
+//       font-size: 40px;
+//       line-height: 60px;
+//       color: $font-dark-color;
+//       font-size: 40px;
+//       padding: 0 0 30px 0;
+//       line-height: 81px;
+//       font-family: "Varela Round", sans-serif;
+//       background: linear-gradient(to right, #fa4559 0%, #fa4559 100%);
+//       -webkit-background-clip: text;
+//       -webkit-text-fill-color: transparent;
+//     }
+//     h4 {
+//       font-family: $font-content;
+//       font-size: 24px;
+//       color: $font-dark-color;
+//       font-weight: 300;
+//     }
+//     p {
+//       font-family: $font-content;
+//       font-size: 16px;
+//       color: $font-dark-color;
+//       padding-bottom: 30px;
+//     }
+//   }
+//   @include lg {
+//     h1 {
+//       font-size: 56px;
+//     }
+//     h4 {
+//       font-size: 36px;
+//     }
+//     h3 {
+//       font-size: 40px;
+//     }
+//   }
+// }
 
 
 
@@ -774,60 +975,22 @@ header {
 }
 
 
-.video-div {
-  display: none;
-  @include ipad {
-    display: unset;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    z-index: -1;
-    pointer-events: none;
-    overflow: hidden;
-  }
-  @include landscape-ipad {
-    height: 100%;
-  }
-
-    @include xl {
-      height: 100%;
-    }
-  }
-
-.video-div iframe {
-  @include ipad {
-   width: 100vw;
-   height: 56.25vw; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
-   min-height: 50vh;
-   min-width: 177.77vh; /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-  }
-  @include landscape-ipad {
-    min-height: 100vh;
-  }
-  @include xl {
-    min-height: 100vh;
-  }
-}
-
 .banner {
-  background-image: url('images/orange-pink-mobile.jpg');
-  background-size: cover;
-  background-position: center;
-  height: calc(100vh + 40px);
+
+  // background-image: url('images/orange-pink-mobile.jpg');
+
+  height: calc(40vh + 70px);
   text-shadow: 1px 1px 5px rgba(1, 1, 1, .1);
-  object-fit: cover;
+  width: 100%;
   text-align: center;
   margin: 0;
   padding: 0;
-  width: 100%;
   color: white;
-  position: relative;
+  display: flex;
+  content-align: center;
+  vertical-align: middle;
+  position: absolute;
+  top: 70px;
   z-index: 0;
   @include flexbox() {
   }
@@ -839,38 +1002,35 @@ header {
   }
   @include flex-wrap (wrap) {
   }
-  img {
-    width: 200px;
-    @include align-self(flex-end) {
-    }
-  }
   h1 {
     font-size: 42px;
     font-weight: 700;
-    letter-spacing: 8px;
-    font-family: "Varela Round", sans-serif;
+    letter-spacing: 3px;
+    font-family: $font-headers;
     text-transform: uppercase;
     margin-left: 5px;
+      @include ipad {
+        font-size: 72px;
+      }
       @include lg {
-      font-family: "Varela Round", sans-serif;
-      font-size: 72px;
+      font-family: $font-headers;
+      font-size: 88px;
+      letter-spacing: 8px;
      }
   }
   h2 {
-    position: absolute;
-    bottom: 20vh;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 400;
-    letter-spacing: 5px;
+    letter-spacing: 1px;
     width: 100vw;
     left: 0;
     right: 0;
     font-family: $font-headers;
     @include ipad {
+      font-size: 28px;
       bottom: 10vh;
     }
     @include lg {
-      bottom: 20vh;
       font-size: 36px;
     }
   }
@@ -878,7 +1038,6 @@ header {
   @include landscape-mobile {
     height: 100vh;
     h2 {
-      bottom: 35vh;
       font-weight: 700;
     }
     h3 {
@@ -890,15 +1049,14 @@ header {
     }
   }
   @include ipad {
-    background-image: none;
     text-align: center;
     margin: 0;
     padding: 0;
-    height: 25vh;
+    height: calc(50vh + 90px);
     width: 100vw;
     color: white;
     position: absolute;
-    top: calc(25vh - 30px);
+    top: 25vh;
     color: white;
     position: relative;
     @include flexbox() {
@@ -922,7 +1080,7 @@ header {
     h3 {
       font-size: 60px;
       letter-spacing: 10px;
-      font-family: "Varela Round", sans-serif;
+      font-family: $font-headers;
       text-transform: uppercase
     }
     h4 {
@@ -937,32 +1095,40 @@ header {
     top: calc(50vh - 30px);
   }
   @include lg {
+    height: calc(50vh - 90px);
+    h1 {
+      letter-spacing: 8px;
+      font-size: 88px;
+    }
     h2 {
-      bottom: 10vh;
+      letter-spacing: 3px;
     }
   }
   @include xl {
-    height: calc(50vh + 40px);
+    height: calc(50vh - 90px);
     width: 100vw;
-    top: calc(50vh - 40px);
     color: white;
     h2 {
-      bottom: 35vh;
       font-weight: 400;
     }
    h3 {
       font-size: 80px;
       letter-spacing: 10px;
-      font-family: "Varela Round", sans-serif;
+      font-family: $font-headers;
       text-transform: uppercase
     }
     h4 {
-      padding-bottom: 12vh;
       font-size: 28px;
       font-weight: 100;
       letter-spacing: 5px;
     }
   }
+}
+
+.banner-text-box {
+  display: flex;
+  align-self: center;
+  flex-direction: column;
 }
 
 .banner-menu {
@@ -971,7 +1137,7 @@ header {
 
 .banner-text {
   margin: 0 auto;
-  position: relative;
+  // position: relative;
   z-index: 2;
   h3 {
     text-align: center;
@@ -1023,7 +1189,7 @@ header {
 
 
 .full-page-text {
-  padding: 90px 10px 90px 30px;
+  padding: 120px 0 90px 0;
   color: white;
   background-color: white;
   position: relative;
@@ -1063,7 +1229,7 @@ header {
     margin: 0 30px 0 30px;
   }
   @include lg {
-    padding: 160px 90px 160px 90px;
+    padding: 160px 180px 160px 180px;
   }
   @include xl {
     padding: 160px 160px 160px 160px;
@@ -1086,7 +1252,7 @@ header {
 .one-of-two-block {
   @include flexbox() {
   }
-  @include flex-basis(250px) {
+  @include flex-basis(330px) {
   }
   @include flex-direction(column) {
   }
@@ -1095,31 +1261,40 @@ header {
   height: auto;
   margin: 15px;
   h3 {
-    color: $green;
-    font-family: 'Varela Round', sans-serif;
+    color: $dark-green;
+    font-family: $font-content;
     margin: 10px 0;
     text-align: left;
+    font-weight: 600;
     @include xl {
       text-align: center;
     }
   }
   p {
+    text-align: left;
+    font-weight: 400;
+    color: $font-medium-color;
+  }
+  p:nth-of-type(1) {
+    text-align: left;
+    margin-left: 15px;
     margin: 5px 0;
     font-family: $font-content;
     color: $font-medium-color;
-  }
-  p:nth-child(1) {
-    color: $font-medium-color;
-    font-weight: 400;
+    font-weight: 700;
   }
   button {
     margin: 10px 0;
-    @include green-ghost-button() {
+    @include dark-green-ghost-button() {
     }
   }
   .green-button {
-    @include green-ghost-button() {
+    @include dark-green-ghost-button() {
     }
+  }
+  @include ipad {
+    @include flex-basis(250px) {
+  }
   }
   @include lg {
     text-align: center;
@@ -1128,6 +1303,65 @@ header {
     }
   }
 }
+
+.one-of-two-block-special-block {
+    display: unset;
+    @include flexbox() {
+    }
+    @include flex-basis(330px) {
+    }
+    @include flex-direction(column) {
+    }
+    @include justify-content(space-between) {
+    }
+    height: auto;
+    margin: 15px;
+    h3 {
+      color: $dark-green;
+      font-family: $font-content;
+      margin: 10px 0;
+      text-align: left;
+      font-weight: 600;
+      @include xl {
+        text-align: center;
+      }
+    }
+    p {
+      text-align: left;
+      margin-left: 15px;
+      margin: 5px 0;
+      font-family: $font-content;
+      color: $font-medium-color;
+      font-weight: 400;
+    }
+    p:nth-child(1) {
+      text-align: center;
+
+      color: $font-medium-color;
+      font-weight: 700;
+    }
+    button {
+      margin: 10px 0;
+      @include dark-green-ghost-button() {
+      }
+    }
+    .green-button {
+      @include dark-green-ghost-button() {
+      }
+    }
+    @include ipad {
+      @include flex-basis(250px) {
+    }
+    }
+    @include lg {
+      display: none;
+      text-align: center;
+      h3 {
+        text-align: center;
+      }
+    }
+  }
+
 
 #one-block-special {
   @include flexbox() {
@@ -1138,12 +1372,13 @@ header {
   }
   @include justify-content(center) {
   }
+  border: solid 10px #56b489;
   max-width: 250px;
   height: 200px;
   margin: 15px;
   h3 {
     color: $green;
-    font-family: "Varela round", sans-serif;
+    font-family: $font-headers;
     margin: 10px 0;
     text-align: left;
   }
@@ -1170,7 +1405,7 @@ header {
     box-shadow: 1px 1px 5px rgba(1, 1, 1, .3);
     width: 200px;
     text-align: center;
-    background: $green;
+    background: $dark-green;
     border-radius: 50%;
     padding: 50px;
     margin: 120px 15px;
@@ -1181,7 +1416,6 @@ header {
     }
     .green-button {
       @include green-button() {
-        background-color: orange;
       }
     }
     h3 {
@@ -1191,7 +1425,7 @@ header {
       text-align: center;
     }
     p {
-      color: rgba(255, 255, 255, .9);
+      color: white;
       font-weight: 300;
       font-size: 16px;
       line-height: 26px;
@@ -1207,7 +1441,9 @@ header {
 }
 
 .full-width-div {
+  display: none;
   @include lg {
+    display: unset;
     width: 100vw;
     @include flexbox() {
     }
@@ -1220,6 +1456,9 @@ header {
 
 /*PORTFOLIO PAGE - INDEX.HTML -------*/
 
+.empty-tag-div {
+  height: 0;
+}
 
 #jreig-div {
   display: none;
@@ -1261,7 +1500,7 @@ header {
     height: 90px;
     }
     @include lg {
-      background-color: $green;
+      // background-color: $green;
     a {
       color: $font-dark-color;
     }
@@ -1275,10 +1514,11 @@ header {
 }
 
 .not-home {
+  margin-top: -70px;
   // background-color: #FDC54B;
-  background-color: $green;
+  // background-color: $green;
   @include ipad {
-    height: 90px;
+    margin-top: -90px;
   }
   a {
     color: $font-dark-color;
@@ -1296,7 +1536,7 @@ header {
 .not-home-about-large {
   display: none;
   // background-color: #FDC54B;
-  background-color: $green;
+  // background-color: $green;
   @include lg {
     display: block;
     height: 90px;
@@ -1318,7 +1558,11 @@ header {
 .no-header {
   background-color: transparent;
   height: 0;
-  margin-top: 0;
+  height: 70px;
+  @include ipad {
+    height: 90px;
+    // margin-top: -90px;
+  }
 }
 
 .main-wrapper {
@@ -1327,6 +1571,9 @@ header {
   width: 100vw;
   position: relative;
   z-index: 3000;
+  @include ipad {
+    margin-top: 0;
+  }
 }
 
 .grow {
@@ -1340,12 +1587,13 @@ header {
 
   /*------------------------*/
 
+
 .portfolio-title {
   text-align: center;
   color: $font-dark-color;
   padding: 125px 15px 35px 15px;
   h2 {
-    font-family: "Varela Round", sans-serif;
+    font-family: $font-headers;
   }
   h6 {
     padding-top: 15px;
@@ -1360,12 +1608,12 @@ header {
   width: 85%;
   margin: 0 auto;
   margin-bottom: 60px;
-  color: $font-dark-color;
+  color: $font-medium-color;
   h3 {
     padding: 30px 0 15px 0;
   }
   h4 {
-    font-size: 22px;
+    font-size: 16px;
   }
   @include md {
     width: 60%;
@@ -1373,6 +1621,11 @@ header {
   @include xl {
     width: 50%
   }
+}
+
+img.graphic-symbol {
+    height: 18px;
+    margin-bottom: -4px;
 }
 
 .quote {
@@ -1386,17 +1639,20 @@ header {
 
 .computer-image-jreig {
   content:url("images/jreig homepage.png");
-  width: 40vw;
+  width: 70vw;
   margin: 0 auto;
-  position: relative;
+  // position: relative;
   margin-bottom: 30px;
+  @include ipad {
+    width: 40vw;
+  }
 }
 
 .computer-image-ps {
   content:url("images/peggy_shannon/peggy shannon homepage.png");
   width: 40vw;
   margin: 0 auto;
-  position: relative;
+  // position: relative;
   margin-bottom: 30px;
 }
 
@@ -1404,8 +1660,19 @@ header {
   content:url("images/the_body_mechanic/body_mechanic_homepage.png");
   width: 40vw;
   margin: 0 auto;
-  position: relative;
+  // position: relative;
   margin-bottom: 30px;
+}
+
+.computer-image-mhh {
+  width: 90vw;
+  content:url("images/mhh_homepage.png");
+  margin: 0 auto;
+  // position: relative;
+  margin-bottom: 30px;
+  @include lg {
+    width: 40vw;
+  }
 }
 
 .foreground-picture {
@@ -1459,11 +1726,12 @@ header {
   }
 }
 
-img.porfolio-images {
+img.portfolio-images {
+  border: solid 1px rgb(80, 80, 80);
   width: 100%;
   margin: 0 auto;
   text-align: center;
-  box-shadow: 0px 5px 30px;
+  // box-shadow: 0px 5px 30px;
 }
 
 .results-img {
@@ -1655,10 +1923,12 @@ img.porfolio-images {
   a {
     color: #fa4a3e;
     text-decoration: none;
+    font-weight: 700;
   }
   a:hover {
     cursor: pointer;
   }
+
   p:nth-of-type(1) {
     padding-right: 15px;
   }
@@ -1701,21 +1971,26 @@ img.porfolio-images {
 }
 
 .about-text {
+  height: auto;
   position: relative;
   font-family: $font-content;
-  background-image: url("images/about-photo-full.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
+  background: #181818;
+  color: white;
+  // background-image: url("images/resized-image-of-julie.png");
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  height: auto;
   @include flexbox() {
   }
-  @include flex-direction(column) {
+  @include flex-direction(row) {
+  }
+  @include flex-wrap(wrap) {
   }
   @include justify-content(space-between) {
   }
   h4 {
-    margin-top: 60px;
+    margin-top: 120px;
     text-align: center;
     font-size: 32px;
     font-family: $font-content;
@@ -1728,22 +2003,50 @@ img.porfolio-images {
     background-size: 50vw;
     background-position: left;
   }
+  @include ipad {
+    height: auto;
+    @include flex-wrap(nowrap) {
+    }
+  }
   @include lg {
-    margin: 0 30px;
+    margin: 180px 30px;
     padding-bottom: 90px;
     background: none;
     height: auto;
     @include flex-direction(row) {
     }
   }
-  @include xl {
-    margin: 0 90px;
-  }
    @include xl {
-    margin: 0 120px;
+    margin: 180px 120px;
   }
   @include xxl {
-    margin: 0 15vw;
+    margin: 180px 15vw;
+  }
+}
+
+.about-image-mobile {
+  background-image: url('images/offset-photo-julie.png');
+  background-size: cover; /* Ensures the image covers the div */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents tiling */
+  width: 100vw;
+  height: 40vh;
+  @include ipad {
+  height: auto;
+  width: 50vw;
+  }
+  @include lg {
+    display: none
+  }
+}
+
+.about-photo-square {
+  @include flexbox() {
+  }
+  object-fit: cover;
+  width: 100%;
+  @include lg {
+    display: none;
   }
 }
 
@@ -1760,6 +2063,11 @@ img.porfolio-images {
   @include xl {
     width: 40vw;
     height: 40vw;
+  }
+  @include xxl {
+    margin-left: 75px;
+    width: 30vw;
+    height: 30vw;
   }
 }
 
@@ -1882,7 +2190,7 @@ img.porfolio-images {
   margin: 0 auto;
   width: 100%;
   h3 {
-    font-family: 'Varela Round', sans-serif;
+    font-family: $font-headers;
   }
   @include lg {
     position: relative;
@@ -1891,34 +2199,51 @@ img.porfolio-images {
 }
 
 .half-page-gradient {
-  position: absolute;
-  bottom: 0;
-  width: 100vw;
-  background: rgba(0,0,0,0);
-  background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(17,17,17,0.1) 13%, rgba(0,0,0,0.8) 100%);
-  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,0)), color-stop(13%, rgba(17,17,17,0.1)), color-stop(100%, rgba(0,0,0,0.8)));
-  background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(17,17,17,0.1) 13%, rgba(0,0,0,0.8) 100%);
-  background: -o-gradient(top, rgba(0,0,0,0) 0%, rgba(17,17,17,0.1) 13%, rgba(0,0,0,0.8) 100%);
-  background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(17,17,17,0.1) 13%, rgba(0,0,0,0.8) 100%);
-  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17,17,17,0.1) 13%, rgba(0,0,0,0.8) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
-  @include landscape-mobile {
-    right: 0;
-    width: 50vw;
-    background: none;
-    color: $font-dark-color;
-    height: 100%;
-    @include flexbox() {
-    }
-    @include flex-direction(column) {
-    }
-    @include justify-content(center) {
-    }
+  height: auto;
+  padding: 0 20px;
+  @include flexbox() {
   }
+  @include flex-direction(column) {
+  }
+  @include justify-content(center) {
+  }
+  .about-info-p {
+    margin-left: 15px;
+  }
+  @include ipad {
+    width: 50vw;
+  }
+  // position: absolute;
+  // bottom: 0;
+  // width: 75vw;
+
+  // background: rgba(0,0,0,0);
+  // background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(17,17,17,0.1) 13%, rgba(0,0,0,0.8) 100%);
+  // background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,0)), color-stop(13%, rgba(17,17,17,0.1)), color-stop(100%, rgba(0,0,0,0.8)));
+  // background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(17,17,17,0.1) 13%, rgba(0,0,0,0.8) 100%);
+  // background: -o-gradient(top, rgba(0,0,0,0) 0%, rgba(17,17,17,0.1) 13%, rgba(0,0,0,0.8) 100%);
+  // background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(17,17,17,0.1) 13%, rgba(0,0,0,0.8) 100%);
+  // background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17,17,17,0.1) 13%, rgba(0,0,0,0.8) 100%);
+  // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
+  // @include landscape-mobile {
+  //   right: 0;
+  //   width: 50vw;
+  //   background: none;
+  //   color: $font-dark-color;
+  //   height: 100%;
+  //   @include flexbox() {
+  //   }
+  //   @include flex-direction(column) {
+  //   }
+  //   @include justify-content(center) {
+  //   }
+
+
   @include lg {
+    border: solid 10px #56b489;
     box-shadow: 1px 3px 20px rgba(1, 1, 1, .3);
     position: relative;
-    background: orange;
+    background: $dark-green;
     opacity: .9;
     width: 400px;
     height: 400px;
@@ -1946,26 +2271,25 @@ img.porfolio-images {
 }
 
 .about-info-p {
-  padding: 15px;
-  width: 66%;
-  margin: 0 auto;
-  color: $font-light-color;
-  line-height: 22px;
-  font-weight: 100;
-  @include landscape-mobile {
-    color: $font-dark-color;
-    h3 {
-      font-family: 'Varela round', sans-serif;
-    }
-    a {
-      color: $font-dark-color;
-    }
-  }
+
   @include landscape-mobile {
     padding: 0;
     width: 80%;
   }
   @include lg {
+    margin: 0 auto;
+    color: $font-light-color;
+    line-height: 22px;
+    font-weight: 100;
+    @include landscape-mobile {
+      color: $font-dark-color;
+      h3 {
+        font-family: $font-headers;
+      }
+      a {
+        color: $font-dark-color;
+      }
+    }
     color: whitesmoke;
     width: 100%;
     h3 {
@@ -1974,7 +2298,7 @@ img.porfolio-images {
       font-size: 46px;
       margin-bottom: 15px;
       line-height: 50px;
-      font-family: 'Varela round', sans-serif;
+      font-family: $font-headers;
     }
     p {
       font-size: 16px;
@@ -2033,11 +2357,12 @@ li {
 
 footer {
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#fa4a3e+0,fa4559+99 */
-  background: #fa4a3e; /* Old browsers */
-  background: -moz-linear-gradient(top,  #fa4a3e 0%, #fa4559 99%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top,  #fa4a3e 0%,#fa4559 99%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom,  #fa4a3e 0%,#fa4559 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fa4a3e', endColorstr='#fa4559',GradientType=0 ); /* IE6-9 */
+  // background: #fa4a3e; /* Old browsers */
+  // background: -moz-linear-gradient(top,  #fa4a3e 0%, #fa4559 99%); /* FF3.6-15 */
+  // background: -webkit-linear-gradient(top,  #fa4a3e 0%,#fa4559 99%); /* Chrome10-25,Safari5.1-6 */
+  // background: linear-gradient(to bottom,  #fa4a3e 0%,#fa4559 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fa4a3e', endColorstr='#fa4559',GradientType=0 ); /* IE6-9 */
+  background-color: $dark-green;
   height: 240px;
   text-align: center;
   margin: 0;
