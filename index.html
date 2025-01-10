@@ -7,10 +7,7 @@
     <title>Pulp Web Design</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="app.css">
-    <script src="https://use.fontawesome.com/releases/v5.0.6/js/brands.js"></script>
-    <script src="https://use.fontawesome.com/releases/v5.0.6/js/solid.js"></script>
-    <script src="https://use.fontawesome.com/releases/v5.0.6/js/regular.js"></script>
-    <script src="https://use.fontawesome.com/releases/v5.0.6/js/fontawesome.js"></script>
+    <script src="components.js" defer></script>
    <link rel="shortcut icon" type="image/png" href="/images/favicon-16X16.png"/>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144257780-1"></script>
@@ -21,11 +18,12 @@
 
       gtag('config', 'UA-144257780-1');
     </script>
-
   </head>
   <body>
+
     <div class="mobile-dropdown-nav">
-          <a href="index.html"><div class="navbar-logo" title="Pulp Web Design Logo"></div></a>
+          <a href="index.html"><div class="navbar-logo" title="Pulp Web Design Logo">
+          </div></a>
           <div class="dropdown">
             <div class="dropbtn" onclick="myFunction()"></div>
               <div id="myDropdownHome" class="dropdown-content">
@@ -34,110 +32,130 @@
                 <a href="contact.html">Contact</a>
               </div>
               </div>
+              <div class="horizontal-menu">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="#work" class="nav-link">Projects</a>
+                <a href="#jules" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+              </div>
             </div>
-          </div>
-        </nav>
+
     <header>
       <div class="banner">
-        <div>
-           <h1>Fresh websites</h1>
-         </div>
-          <div>
-            <h2>pretty, smart design</h2>
-          </div>
+        <div class="banner-text-box">
+          <h1>Fresh tech</h1>
+          <h2>software | automation | websites</h2>
+        </div>
       </div>
-      <div class="video-div">
+      <!-- <div class="video-div">
         <iframe src="https://player.vimeo.com/video/320916675?background=1&muted=1&quality=720p" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-      </div>
+      </div> -->
     </header>
     <div class="main-wrapper">
+      <div class="intro-wrapper">
+      <div class="intro">
+    <h2>Pulp Web Design is a boutique digital solutions studio, that helps small businesses look professional online and run smoothly behind the scenes. </h2><h5>I work with you to understand what you need and create solutions that make your life easier—whether it’s building custom tools, using ready-made options, or a mix of both. </h5><h5>My goal is to craft custom technical solutions tailored to your unique needs, allowing you to focus on what you do best.</h5>
+  </div>
+</div>
 <div id="work" class="full-page-text">
   <div class="one-of-two-block">
   <div>
-    <h3>Save time</h3>
+    <h3>Custom Software</h3>
+    <p>Johnson Real Estate Investment Group, Inc.</p>
     <p>Jason, a busy small business owner, needed a web application that automated his time consuming workflow and processes.</p>
   </div>
   <div class="self-flex-end">
-    <p>Johnson Real Estate Investment Group, Inc.</p>
+
       <a href="jreig.html">
       <button href="">solution</button></a>
   </div>
   </div>
-    <div class="one-of-two-block">
+  <div class="one-of-two-block">
     <div>
-      <h3>Tell a story</h3>
-        <p>Peggy Shannon needed a new website to promote her upcoming book release, "Churches of Paris", as well as provide a space to showcase her other passions.</p>
-      </div>
+      <h3>Automate</h3>
+      <p>McCreary's Healthy Homes</p>
+      <p>Kevin, a long-time client, relies on us for custom solutions to bridge the gaps left by industry software, enabling him to fully automate the processes of his thriving business.</p>
+    </div>
     <div class="self-flex-end">
-      <p>Peggy Shannon</p>
-      <a href="peggy-shannon.html"><button>solution</button></a>
+      <a href="mccrearys_healthy_homes.html">
+      <button href="">solution</button></a>
     </div>
   </div>
   <div class="one-of-two-block">
     <div>
-      <h3>Build trust</h3>
-        <p>Stephanie, a new massage therapist, needed a website that conveyed professionalism, and ensured convenient scheduling options for new clients.</p>
-    </div>
+      <h3>Website</h3>
+      <p>Peggy Shannon</p>
+        <p>Peggy Shannon needed a new website to promote her upcoming book release, "Churches of Paris", as well as provide a space to showcase her other passions.</p>
+      </div>
     <div class="self-flex-end">
-      <p>The Body Mechanic</p>
-      <a href="the_body_mechanic.html"><button>solution</button></a>
+      <a href="peggy-shannon.html"><button>solution</button></a>
     </div>
+  </div>
+
+  <div class="one-of-two-block-special-block">
+    <div>
+      <h3>What do you need?</h3>
+        <p>Whether it's a website, software solution, or streamlined workflows, I’m happy to explore how Pulp can assist you.</p>
+      </div>
+    <div class="self-flex-end">
+      <a href="contact.html"><button>contact</button></a>
     </div>
+</div>
 
   <div class="full-width-div">
-    <div id="one-block-special">
+   <!--  <div id="one-block-special">
       <div>
-        <h3>Your Turn</h3>
-          <p>Call or email me with your project details. I would love to listen and help you if I can!</p>
+        <h3>What do you need?</h3>
+          <p>Whether you need a website, software solution, or streamlined workflows, I’m happy to explore how Pulp can assist you.</p>
       </div>
       <div class="self-flex-end">
         <a href="contact.html">
         <button class="green-button" href="">contact</button></a>
         </div>
-    </div>
+    </div> -->
   </div>
+  <div id="jules" class="empty-tag-div"></div>
 </div>
     <div class="about-text">
      <!--  <div>
          <h4>About Pulp</h4>
        </div> -->
-       <img src="images/about-photo-full.jpg" class="about-photo" alt="photo of designer and developer Julie VanderLaan">
-        <div class="half-page-gradient">
+        <div class="about-image-mobile"></div>
+       <img src="images/resized-image-of-julie.png" class="about-photo" alt="photo of designer and developer Julie VanderLaan">
+       <div class="half-page-gradient">
         <div class="about-info">
 
           <!-- <div> -->
             <!-- <img src="images/about-photo.png" class="profile-picture" alt="profile-picture"/> -->
          <!--  </div> -->
-          <div id="jules" class="about-info-p">
-            <h3>hi, I'm Julie</h3><br>
-            <p>I'm the designer and developer for Pulp. I love transforming an idea into a tangible product. The more creative or challenging, the better.</p><br>
-            <p>Message me and tell me a little about yourself and your project.</p><br>
-            <p>And of course, feel free to read a little <a class="no-text-decoration" href="about.html">more about me.</a></p>
+          <div class="about-info-p">
+            <h3>Hi, I'm Julie,</h3><br>
+            <p>I'm the designer and developer behind Pulp, where I transform ideas into tangible solutions. Whether you're looking for a custom website, software tailored to your needs, or streamlined automation for your small business, I’m here to help bring your vision to life. Let’s create something great together—contact me today to get started!</p><br>
+            <!-- <p>And of course, feel free to read a little <a class="no-text-decoration" href="about.html">more about me.</a></p> -->
           </div>
         </div>
       <div class="self-align-right-flex-end">
         <a href="contact.html">
         <button href="">let's chat</button></a>
+      </div>
     </div>
   </div>
-  </div>
-     <footer>
+    <footer>
       <div>
-        <h1>Let's build something awesome together  : )</h1>
+        <h1>Technology that works for you.</h1>
       </div>
       <div>
         <h3>513-399-7542</h3>
+        <p>julie@pulpwebdesign.com</p>
       </div>
       <div>
-      <ul>
-        <li><a href="#work">Projects</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <div>
-        </footer>
+        <ul>
+          <li><a href="#work">Projects</a></li>
+          <li><a href="#jules">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
       </div>
-    <script src="components.js"></script>
+    </footer>
   </body>
 </html>
 
