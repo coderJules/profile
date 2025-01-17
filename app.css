@@ -302,7 +302,6 @@ header {
 
 /* Hover effect */
 .nav-link:hover {
-  background-color: #fa4a3e;
   color: #216869; }
 
 /* Active state */
@@ -667,13 +666,13 @@ header {
       text-align: center;
       margin: 0;
       padding: 0;
-      height: calc(50vh + 90px);
+      top: 90px;
+      margin-top: 90px;
+      height: calc(50vh - 90px);
       width: 100vw;
       color: white;
       position: absolute;
-      top: 25vh;
       color: white;
-      position: relative;
       display: -webkit-box;
       display: -moz-box;
       display: -ms-flexbox;
@@ -683,11 +682,11 @@ header {
       -moz-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column;
-      -webkit-justify-content: space-between;
-      -moz-justify-content: space-between;
-      -ms-justify-content: space-between;
-      justify-content: space-between;
-      -ms-flex-pack: space-between;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      -ms-justify-content: center;
+      justify-content: center;
+      -ms-flex-pack: center;
       -webkit-align-content: middle;
       -moz-align-content: middle;
       -ms-align-content: middle;
@@ -1537,7 +1536,6 @@ img.portfolio-images {
   margin: 0 auto;
   margin-bottom: 30px;
   color: slategray;
-  position: relative;
   box-sizing: border-box;
   border: 0 3px 0 3px solid #23C06E; }
   .portfolio-text p {
@@ -1694,7 +1692,7 @@ img.portfolio-images {
       margin: 180px 15vw; } }
 
 .about-image-mobile {
-  background-image: url("images/offset-photo-julie.png");
+  background-image: url("images/offset-photo-julie-minified.png");
   background-size: cover;
   /* Ensures the image covers the div */
   background-position: center;
@@ -1703,6 +1701,9 @@ img.portfolio-images {
   /* Prevents tiling */
   width: 100vw;
   height: 40vh; }
+  @media only screen and (max-height: 450px) and (orientation: landscape) {
+    .about-image-mobile {
+      height: 100vh; } }
   @media only screen and (min-width: 768px) and (min-height: 450px) {
     .about-image-mobile {
       height: auto;

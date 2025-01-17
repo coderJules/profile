@@ -584,7 +584,7 @@ header {
 
 /* Hover effect */
 .nav-link:hover {
-    background-color: #fa4a3e;
+    // background-color: #fa4a3e;
     color: $dark-green;
 }
 
@@ -1052,18 +1052,19 @@ header {
     text-align: center;
     margin: 0;
     padding: 0;
-    height: calc(50vh + 90px);
+    top:90px;
+    margin-top: 90px;
+    height: calc(50vh - 90px);
     width: 100vw;
     color: white;
     position: absolute;
-    top: 25vh;
     color: white;
-    position: relative;
+
     @include flexbox() {
     }
     @include flex-direction(column) {
     }
-    @include justify-content(space-between) {
+    @include justify-content(center) {
     }
     @include align-content(middle) {
     }
@@ -1861,7 +1862,7 @@ img.portfolio-images {
   margin: 0 auto;
   margin-bottom: 30px;
   color: $font-dark-color;
-  position: relative;
+  // position: relative;
   box-sizing: border-box;
   border: 0 3px 0 3px solid $green;
   p {
@@ -2025,16 +2026,20 @@ img.portfolio-images {
 }
 
 .about-image-mobile {
-  background-image: url('images/offset-photo-julie.png');
+  background-image: url('images/offset-photo-julie-minified.png');
   background-size: cover; /* Ensures the image covers the div */
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents tiling */
   width: 100vw;
   height: 40vh;
+  @include landscape-mobile {
+    height: 100vh;
+  }
   @include ipad {
   height: auto;
   width: 50vw;
   }
+
   @include lg {
     display: none
   }
